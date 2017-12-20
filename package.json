@@ -1,0 +1,25 @@
+{
+  "name": "fault-five-site",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fault5/fault-five-site"
+  },
+  "private": true,
+  "main": "gruntfile.js",
+  "dependencies": {
+    "coffeescript": "^2.1.0",
+    "grunt": "^1.0.1",
+    "normalize.css": "^7.0.0"
+  },
+  "devDependencies": {
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^3.1.0",
+    "grunt-contrib-watch": "^1.0.0"
+  },
+  "keywords": [],
+  "author": "David Solwold",
+  "license": "ISC"
+}

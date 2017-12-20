@@ -1,0 +1,55 @@
+@import 'reset';
+@import 'var';
+@import 'mix';
+
+ 
+
+.main-nav{ 
+	background-color: $dark-grey;
+	
+	
+	.main-nav__link{
+		color: $light-green;
+	}
+}
+
+.js-postcard-menu{
+	@include flex-item-col;
+	background-color: $light-green;
+	transform: translateY(0);
+	transition-duration: .3s;
+}
+
+.js-postcard-menu--hidden {
+	transform: translateY(-100%);
+	transition-duration: .3s;
+}
+
+.js-social-widget{
+	@include flex-item-col;
+	background-color: $dark-grey;
+	height: auto;
+	min-height: 6em;
+	width: 3em;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	transform: translateX(-100%);
+	transition-duration: 3s;
+	z-index: 100;
+}
+
+	@include medium {
+		.js-social-widget{
+			bottom: 6em;
+			transform: translateX(-100%);
+			transition-duration: 3s;
+		}
+		
+		.js-social-widget .js-social-widget--hidden {
+		transform: translateX(0);
+		transition-duration: 3s;
+}
+	}
+
+.js-social-widget__icon {}

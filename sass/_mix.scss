@@ -1,0 +1,38 @@
+/*	F5MG MIXOLOGY  */
+
+
+
+/* Flex Box */
+@mixin flex-item-col {
+    display: -webkit-flex;
+    display: flex;
+	  flex-flow: column nowrap;
+	  background-color: black;
+}
+
+@mixin flex-item-row {
+    display: -webkit-flex;
+    display: flex;
+	  flex-flow: row nowrap;
+}
+
+
+/* Media Queries */
+
+@mixin small() {
+    @media only screen and (max-width: 328px) {
+        @content;
+    }
+}
+
+@mixin medium() {
+    @media only screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin large() {
+    @media only screen and (min-width: 1000px) {
+        @content;
+    }
+}
