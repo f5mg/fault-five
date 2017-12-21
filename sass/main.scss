@@ -14,7 +14,7 @@
 }
 
 .js-postcard-menu{
-	@include flex-item-col;
+	@include flex($col:true);
 	background-color: $light-green;
 	transform: translateY(0);
 	transition-duration: .3s;
@@ -26,7 +26,7 @@
 }
 
 .js-social-widget{
-	@include flex-item-col;
+	@include flex($col:true);
 	background-color: $dark-grey;
 	height: auto;
 	min-height: 6em;

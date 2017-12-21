@@ -1,0 +1,36 @@
+/* Partial Imports */
+@import 'reset';
+@import 'var';
+@import 'mix';
+
+/* elements */
+.flex-container {
+	@include flex($col:true);
+	justify-content: center;
+	align-items: center;
+	background-color: $dark-grey;
+	
+	.flex-container__item {
+		flex: 1 1 auto;
+	}
+}
+
+	@include medium {
+			.flex-container {
+				@include flex($row:true);
+			}
+	}
+	
+.form {
+	background-color: $light-grey;
+	.form__inputs {
+		@include flex($row:true);
+	}
+	
+	.form__submit-button {
+		cursor: pointer;
+	}
+}
+	
+
+
