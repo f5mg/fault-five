@@ -45,7 +45,7 @@ small, .font_small {
 /* color scheme */
 /*	F5MG MIXOLOGY  */
 /* Flex Box */
-/* margin and padding by percent */
+/* margin and padding */
 /* Media Queries */
 .main-nav {
   background-color: #4d4d4d; }
@@ -56,7 +56,6 @@ small, .font_small {
   display: -webkit-flex;
   display: flex;
   flex-flow: column nowrap;
-  background-color: black;
   display: -webkit-flex;
   display: flex;
   flex-flow: row nowrap;
@@ -72,7 +71,6 @@ small, .font_small {
   display: -webkit-flex;
   display: flex;
   flex-flow: column nowrap;
-  background-color: black;
   display: -webkit-flex;
   display: flex;
   flex-flow: row nowrap;
