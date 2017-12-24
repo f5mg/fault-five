@@ -11,17 +11,21 @@
 	  
 
 
-	<body class="flex-container">
+	<body>
 		
-		<div class="flex-container flex-container__item">
-			<form class="form" action="" method="post">
-				<h3>Sign Up Here</h3>
+		<div class="flex-container">
+			
+		</div>
+		
+		<div class="flex-container">
+			<form class="flex-container__item form" action="" method="post">
+				<h4>Sign Up Here</h4>
 				<p>We will continue to send out our monthly emails providing tips and tricks on how to enhance your website's value.</p>
-			  <div class="form form__inputs">
-				<input name"" value="" />
-				<input name"" value"" />
+			  <div class="flex-container__item form__functions">
+				<input class="form__input" name"" value="Name" />
+				<input class="form__input" name"" value="Email" />
+				<input class="form__input form__submit-btn" type="submit" name="Send" value="send">
 				</div>
-				<input class="form__submit-button" type="submit" name="Send" value="send">
 			</form>
 			
 		</div>

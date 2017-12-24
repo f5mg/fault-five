@@ -8,6 +8,18 @@
 
 /*	F5MG Variables  */
 /* Google Font Imports */
+/* color scheme */
+/*	F5MG MIXOLOGY  */
+/* Flex Box */
+.js-postcard-menu {
+  display: flex; }
+
+.js-postcard-menu, .js-social-widget {
+  flex-direction: column; }
+
+/* Element Creation for BEM */
+/* padding & margin */
+/* Media Queries */
 /* Font Size Control */
 html {
   font-size: 1em; }
@@ -42,38 +54,20 @@ h4 {
 small, .font_small {
   font-size: 0.618em; }
 
-/* color scheme */
-/*	F5MG MIXOLOGY  */
-/* Flex Box */
-/* margin and padding */
-/* Media Queries */
 .main-nav {
   background-color: #4d4d4d; }
-  .main-nav .main-nav__link {
+  .main-nav__link {
     color: #6cd42a; }
 
 .js-postcard-menu {
-  display: -webkit-flex;
-  display: flex;
-  flex-flow: column nowrap;
-  display: -webkit-flex;
-  display: flex;
-  flex-flow: row nowrap;
   background-color: #6cd42a;
   transform: translateY(0);
   transition-duration: .3s; }
-
-.js-postcard-menu--hidden {
-  transform: translateY(-100%);
-  transition-duration: .3s; }
+  .js-postcard-menu__hidden {
+    transform: translateY(-100%);
+    transition-duration: .3s; }
 
 .js-social-widget {
-  display: -webkit-flex;
-  display: flex;
-  flex-flow: column nowrap;
-  display: -webkit-flex;
-  display: flex;
-  flex-flow: row nowrap;
   background-color: #4d4d4d;
   height: auto;
   min-height: 6em;
@@ -91,6 +85,6 @@ small, .font_small {
     transform: translateX(-100%);
     transition-duration: 3s; }
 
-  .js-social-widget .js-social-widget--hidden {
+  .js-social-widget--hidden {
     transform: translateX(0);
     transition-duration: 3s; } }

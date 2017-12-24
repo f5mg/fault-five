@@ -1,6 +1,7 @@
 @import 'reset';
 @import 'var';
 @import 'mix';
+@import 'font-elements';
 
  
 
@@ -8,25 +9,30 @@
 	background-color: $dark-grey;
 	
 	
-	.main-nav__link{
+	@include e(link) {
 		color: $light-green;
 	}
 }
 
 .js-postcard-menu{
-	@include flex($col:true);
+	@include flex ((
+		flex,
+		col,
+		));
 	background-color: $light-green;
 	transform: translateY(0);
 	transition-duration: .3s;
-}
 
-.js-postcard-menu--hidden {
-	transform: translateY(-100%);
-	transition-duration: .3s;
+	@include e(hidden) {
+		transform: translateY(-100%);
+		transition-duration: .3s;
+	}
 }
 
 .js-social-widget{
-	@include flex($col:true);
+	@include flex ((
+		col
+		));
 	background-color: $dark-grey;
 	height: auto;
 	min-height: 6em;
@@ -46,7 +52,7 @@
 			transition-duration: 3s;
 		}
 		
-		.js-social-widget .js-social-widget--hidden {
+		.js-social-widget--hidden {
 		transform: translateX(0);
 		transition-duration: 3s;
 }

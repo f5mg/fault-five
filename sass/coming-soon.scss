@@ -2,40 +2,61 @@
 @import 'reset';
 @import 'var';
 @import 'mix';
+@import 'font-elements';
 
 /* elements */
 .flex-container {
-	@include flex($col:true);
-	justify-content: center;
-	align-items: center;
+	@include flex ((
+		flex,
+		col,
+		));
 	background-color: $dark-grey;
-}
+	@include medium {
+		
+	}
 	
-	.flex-container__item {
+	@include medium {
+		.flex-container {
+		
+		}
+	}
+	
+	@include e(item) {
+		@include flex ((
+		flex,
+		col,
+		));
 		flex: 1 1 auto;
 	}
-
-
-	@include medium {
-			.flex-container {
-				@include flex($row:true);
-			}
-	}
-	
-.form {
-	background-color: $light-grey;
-	@include pad-mar($container: true);
 }
-	.form__inputs {
-		@include flex($row:true);
-		@include pad-mar($text: true);
+
+	
+
+
+
+
+
+.form {
+	@include padding(1em 4em);
+	height: auto;
+	background-color: $light-grey;
+
+	@include e(functions) {
+		
+		@include padding(.5em 0);
+		
+		@include medium {
+			
+		}
+		
+	}
+	 
+	@include e(input) {
+		@include margin(0 1em 1em 0);
 	}
 	
-	
-	.form__submit-button {
+	@include e(submit-btn) {
 		cursor: pointer;
 	}
-
-	
-
+}
 

@@ -13,6 +13,7 @@
     "normalize.css": "^7.0.0"
   },
   "devDependencies": {
+    "grunt-browser-sync": "^2.2.0",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-cssmin": "^2.2.1",
     "grunt-contrib-sass": "^1.0.0",

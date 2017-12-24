@@ -1,96 +1,72 @@
-@import url(//fonts.googleapis.com/css?family=Khand:400,700);
-@import url(//fonts.googleapis.com/css?family=Oswald:400,700);
-@import url(//fonts.googleapis.com/css?family=Permanent+Marker);
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box; }
+/*
+Error: Undefined mixin 'placeholder'.
+        on line 7 of C:/Users/Owner/OneDrive/FAULT FIVE MEDIA GROUP/MAMP/htdocs/fault-five/sass/_mix.scss, in `placeholder'
+        from line 7 of C:/Users/Owner/OneDrive/FAULT FIVE MEDIA GROUP/MAMP/htdocs/fault-five/sass/_mix.scss
+        from line 3 of C:\Users\Owner\OneDrive\FAULT FIVE MEDIA GROUP\MAMP\htdocs\fault-five\sass\main.scss
 
-/*	F5MG Variables  */
-/* Google Font Imports */
-/* Font Size Control */
-html {
-  font-size: 1em; }
+2: @import 'var';
+3: @import 'mix';
+4: 
+5:  
+6: 
+7: .main-nav{ 
+8: 	background-color: $dark-grey;
+9: 	
+10: 	
+11: 	@include e(link) {
+12: 		color: $light-green;
 
-body {
-  font-family: Helvetica, Arial, "sans-serif";
-  font-weight: 400;
-  line-height: 1.45; }
-
-p {
-  margin-bottom: 1.3em; }
-
-h1, h2, h3, h4 {
-  margin: 1.414em 0 0.5em;
-  font-family: "Khand", sans-serif;
-  font-weight: inherit;
-  line-height: 1.2; }
-
-h1 {
-  margin-top: 0;
-  font-size: 6.854em; }
-
-h2 {
-  font-size: 4.236em; }
-
-h3 {
-  font-size: 2.618em; }
-
-h4 {
-  font-size: 1.618em; }
-
-small, .font_small {
-  font-size: 0.618em; }
-
-/* color scheme */
-/*	F5MG MIXOLOGY  */
-/* Flex Box */
-/* margin and padding */
-/* Media Queries */
-.main-nav {
-  background-color: #4d4d4d; }
-  .main-nav .main-nav__link {
-    color: #6cd42a; }
-
-.js-postcard-menu {
-  display: -webkit-flex;
-  display: flex;
-  flex-flow: column nowrap;
-  display: -webkit-flex;
-  display: flex;
-  flex-flow: row nowrap;
-  background-color: #6cd42a;
-  transform: translateY(0);
-  transition-duration: .3s; }
-
-.js-postcard-menu--hidden {
-  transform: translateY(-100%);
-  transition-duration: .3s; }
-
-.js-social-widget {
-  display: -webkit-flex;
-  display: flex;
-  flex-flow: column nowrap;
-  display: -webkit-flex;
-  display: flex;
-  flex-flow: row nowrap;
-  background-color: #4d4d4d;
-  height: auto;
-  min-height: 6em;
-  width: 3em;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  transform: translateX(-100%);
-  transition-duration: 3s;
-  z-index: 100; }
-
-@media only screen and (min-width: 768px) {
-  .js-social-widget {
-    bottom: 6em;
-    transform: translateX(-100%);
-    transition-duration: 3s; }
-
-  .js-social-widget .js-social-widget--hidden {
-    transform: translateX(0);
-    transition-duration: 3s; } }
+Backtrace:
+C:/Users/Owner/OneDrive/FAULT FIVE MEDIA GROUP/MAMP/htdocs/fault-five/sass/_mix.scss:7:in `placeholder'
+C:/Users/Owner/OneDrive/FAULT FIVE MEDIA GROUP/MAMP/htdocs/fault-five/sass/_mix.scss:7
+C:\Users\Owner\OneDrive\FAULT FIVE MEDIA GROUP\MAMP\htdocs\fault-five\sass\main.scss:3
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:98:in `block in with_mixin'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:115:in `with_frame'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:98:in `with_mixin'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:349:in `visit_mixin'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:115:in `with_frame'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:160:in `visit'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:328:in `block (2 levels) in visit_import'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:328:in `map'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:328:in `block in visit_import'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:88:in `block in with_import'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:115:in `with_frame'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:88:in `with_import'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:325:in `visit_import'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:115:in `with_frame'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:160:in `visit'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:159:in `visit'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:8:in `visit'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/root_node.rb:20:in `render'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/engine.rb:281:in `render'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/exec/sass_scss.rb:400:in `run'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/exec/base.rb:52:in `parse'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/exec/base.rb:19:in `parse!'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/lib/ruby/gems/2.4.0/gems/sass-3.4.24/bin/sass:13:in `<top (required)>'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/bin/sass:22:in `load'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2018/ruby/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined mixin 'placeholder'.\A         on line 7 of C:/Users/Owner/OneDrive/FAULT FIVE MEDIA GROUP/MAMP/htdocs/fault-five/sass/_mix.scss, in `placeholder'\A         from line 7 of C:/Users/Owner/OneDrive/FAULT FIVE MEDIA GROUP/MAMP/htdocs/fault-five/sass/_mix.scss\A         from line 3 of C:\Users\Owner\OneDrive\FAULT FIVE MEDIA GROUP\MAMP\htdocs\fault-five\sass\main.scss\A \A 2: @import 'var';\A 3: @import 'mix';\A 4: \A 5:  \A 6: \A 7: .main-nav{ \A 8: 	background-color: $dark-grey;\A 9: 	\A 10: 	\A 11: 	@include e(link) {\A 12: 		color: $light-green;"; }

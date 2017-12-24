@@ -35,7 +35,7 @@ module.exports = function (grunt) {
 						separator: '/*concat*/'
 					},
 					dist: {
-						src: ['css/*.min.css', '!css/main.min.css'],
+						src: ['css/*.min.css'],
 						dest: 'style.min.css'
 					}
 				},

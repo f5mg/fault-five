@@ -3,31 +3,44 @@
 
 /* Flex Box */
 
-@mixin flex($row: true, $col: true) {
-	@if $row {
-	display: -webkit-flex;
-	display: flex;
-	flex-flow: column nowrap;
-	}
-	@if $col {
-	display: -webkit-flex;
-	display: flex;
-	flex-flow: row nowrap;
-	}
+%row { flex-direction: row; }
+%flex {display: flex;}
+%col { flex-direction: column; }
+%wrap { flex-wrap: wrap; }
+%no-wrap { flex-wrap: no-wrap; }
+%jcenter { justify-content: center; }
+%acenter { align-items: center; }
+%start { justify-content: flex-start; }
+%end { justify-content: flex-end; }
+
+
+@mixin flex($items) {
+    @each $item in $items {
+        @extend %#{$item};
+    }
 }
 
 
-/* margin and padding */
+/* Element Creation for BEM */
 
-@mixin pad-mar($text:true, $container:true) {
-	@if $text {
-	padding: 5% 2.5%;
-	margin: 0 auto;
+@mixin e($element) {
+  &__#{$element} {
+    @content;
   }
-	@if $container {
-	padding: 10% 5%;
-	margin: 0 auto;
-	}
+}
+
+/* padding & margin */
+
+@mixin padding($values...) {    
+    @each $var in $values {
+        padding: #{$var};
+    }
+}
+
+@mixin margin($values...) {    
+    @each $var in $values {
+        margin: #{$var};
+    }
 }
 
 
@@ -35,7 +48,7 @@
 
 @mixin small() {
     @media only screen and (max-width: 328px) {
-        @content;
+			@content;
     }
 }
 
@@ -46,7 +59,7 @@
 }
 
 @mixin large() {
-    @media only screen and (min-width: 1000px) {
-        @content;
+    @media only screen and (min-width: 1000px) {  
+			@content;
     }
 }
