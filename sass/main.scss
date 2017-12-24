@@ -1,25 +1,25 @@
+/* Partial Imports */
 @import 'reset';
 @import 'var';
 @import 'mix';
-@import 'font-elements';
+
 
  
 
 .main-nav{ 
-	background-color: $dark-grey;
+	background-color: $primary-color-drk;
 	
 	
 	@include e(link) {
-		color: $light-green;
+		color: $secondary-color;
 	}
 }
 
 .js-postcard-menu{
-	@include flex ((
-		flex,
-		col,
-		));
-	background-color: $light-green;
+	@include flexbox;
+	@include flex-flow(column nowrap);
+	@include justify-content(center);
+	background-color: $secondary-color;
 	transform: translateY(0);
 	transition-duration: .3s;
 
@@ -30,16 +30,16 @@
 }
 
 .js-social-widget{
-	@include flex ((
-		col
-		));
-	background-color: $dark-grey;
-	height: auto;
-	min-height: 6em;
-	width: 3em;
+	@include flexbox;
+	@include flex-flow(column nowrap);
+	@include justify-content(center);
 	position: fixed;
 	bottom: 0;
 	left: 0;
+	height: auto;
+	min-height: 6em;
+	width: 3em;
+	background-color: $primary-color-drk;
 	transform: translateX(-100%);
 	transition-duration: 3s;
 	z-index: 100;

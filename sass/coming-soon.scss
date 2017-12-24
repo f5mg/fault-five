@@ -1,62 +1,161 @@
-/* Partial Imports */
+/*				 -->		 <--						*/
+/*				-->	INDEX	<--						*/
+/*	 -->	coming-soon.scss  <--		*/
+
+/*    1. partial imports          */
+/*    2. flexed elements          */
+/*    3. forms                    */
+/*    4. buttons                  */
+/*    5. font control             */
+
+
+
+
+
+
+/* partial imports */
+
 @import 'reset';
 @import 'var';
 @import 'mix';
-@import 'font-elements';
 
-/* elements */
+
+
+
+
+/* flexed elements */
+
 .flex-container {
-	@include flex ((
-		flex,
-		col,
-		));
-	background-color: $dark-grey;
-	@include medium {
-		
-	}
+	@include flexbox;
+	@include flex-flow(column nowrap);
+	@include justify-content(center);
+	background-color: $primary-color-drk;
 	
-	@include medium {
-		.flex-container {
-		
+		@include medium {
+				@include flex-flow(row nowrap)
 		}
-	}
-	
-	@include e(item) {
-		@include flex ((
-		flex,
-		col,
-		));
-		flex: 1 1 auto;
-	}
+
+		@include e(item) {
+			@include flexbox;
+			@include flex-flow(column nowrap);
+			@include justify-content(center);
+			@include flex( 1 1 auto);
+		}
 }
 
 	
 
 
 
-
+/* forms */
 
 .form {
-	@include padding(1em 4em);
+	@include padding(1em);
 	height: auto;
-	background-color: $light-grey;
-
-	@include e(functions) {
-		
-		@include padding(.5em 0);
-		
-		@include medium {
-			
-		}
-		
-	}
-	 
-	@include e(input) {
-		@include margin(0 1em 1em 0);
+	background-color: $primary-color-lt; 
+	@include medium {
+		@include padding(1em 4em)
 	}
 	
-	@include e(submit-btn) {
-		cursor: pointer;
+		@include e(functions) {
+			@include padding(.5em 0);
+			@include medium {
+				@include flex-flow(row nowrap);
+				@include justify-content(start);
+			}
+		}
+
+		@include e(input) {
+			@include margin(0 1em 1em 0);
+			@include padding(0 .5em);
+			height: 2.5em;
+			@include medium {
+				height: auto;
+				@include padding(.5em)
+			}
+		}
+}
+
+
+
+
+
+/* buttons */
+
+.btn {
+  border: none;
+  cursor: pointer;
+	background-color: $primary-color-drk;
+	color: white;
+  text-align: center;
+  transition: all 0.5s;
+	@include padding(0 .5em);
+	&:focus {outline:0;}
+	@include medium {
+		@include padding(0 2em)
 	}
 }
+
+.btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.btn:hover span {
+  padding-right: 15px;
+}
+
+.btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
+
+/* font control */
+
+html {font-size: 1em;}
+
+body {
+  font-family: Helvetica, Arial, "sans-serif";
+  font-weight: 400;
+  line-height: 1.45;  
+}
+
+p {margin-bottom: 1.3em;}
+
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+	font-family: $khand;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 6.854em;
+}
+
+h2 {font-size: 4.236em;}
+
+h3 {font-size: 2.618em;}
+
+h4 {font-size: 1.618em;}
+
+small, .font_small {font-size: 0.618em;}
+
+
+
 

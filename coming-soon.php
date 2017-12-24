@@ -13,7 +13,7 @@
 
 	<body>
 		
-		<div class="flex-container">
+		<div class="flex-container header">
 			
 		</div>
 		
@@ -24,7 +24,8 @@
 			  <div class="flex-container__item form__functions">
 				<input class="form__input" name"" value="Name" />
 				<input class="form__input" name"" value="Email" />
-				<input class="form__input form__submit-btn" type="submit" name="Send" value="send">
+				<button class="btn form__input" type="submit" name="send" value="send"><span>Send </span></button>
+					
 				</div>
 			</form>
 			

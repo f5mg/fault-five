@@ -1,10 +1,5 @@
 /*	F5MG Variables  */
 
-/* Google Font Imports */
-
-@import url(//fonts.googleapis.com/css?family=Khand:400,700);
-@import url(//fonts.googleapis.com/css?family=Oswald:400,700);
-@import url(//fonts.googleapis.com/css?family=Permanent+Marker);
 
 $khand: 'Khand', sans-serif;
 $oswald: 'Oswald', sans-serif;
@@ -13,11 +8,13 @@ $marker: 'Permanent Marker', cursive;
 
 
 /* color scheme */
-$light-green: #6cd42a;
-$dark-green: #00471B;
-$light-grey: #eeeeee;
-$dark-grey: #4d4d4d;
-$grey: #9f9f9f;
+
+$primary-color: #9f9f9f;
+$primary-color-lt: #eeeeee;
+$primary-color-drk: #4d4d4d;
+
+$secondary-color: #6cd42a;
+$secondary-color-drk: #00471B;
 
 
 

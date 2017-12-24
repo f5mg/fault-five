@@ -1,27 +1,142 @@
-/* Partial Imports */
-@import url(//fonts.googleapis.com/css?family=Khand:400,700);
-@import url(//fonts.googleapis.com/css?family=Oswald:400,700);
-@import url(//fonts.googleapis.com/css?family=Permanent+Marker);
+/*				 -->		 <--						*/
+/*				-->	INDEX	<--						*/
+/*	 -->	coming-soon.scss  <--		*/
+/*    1. partial imports          */
+/*    2. flexed elements          */
+/*    3. forms                    */
+/*    4. buttons                  */
+/*    5. font control             */
+/* partial imports */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box; }
 
 /*	F5MG Variables  */
-/* Google Font Imports */
 /* color scheme */
-/*	F5MG MIXOLOGY  */
-/* Flex Box */
-.flex-container, .flex-container__item {
-  display: flex; }
-
-.flex-container, .flex-container__item {
-  flex-direction: column; }
-
+/*	     F5MG "MIXOLOGY"          */
+/*				  -->		<--						*/
+/*				-->	INDEX	<--						*/
+/*	   -->	mix.scss  <--		      */
+/*    1. Element Creation for BEM */
+/*    2. padding & margin         */
+/*    3. Media Queries            */
+/*    4. Flex Box                 */
 /* Element Creation for BEM */
 /* padding & margin */
 /* Media Queries */
-/* Font Size Control */
+/* Flex Box */
+/* flexed elements */
+.flex-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  -moz-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  background-color: #4d4d4d; }
+  @media only screen and (min-width: 768px) {
+    .flex-container {
+      -webkit-flex-flow: row nowrap;
+      -moz-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap; } }
+  .flex-container__item {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+    -moz-flex-flow: column nowrap;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-box-flex: 1 1 auto;
+    -moz-box-flex: 1 1 auto;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto; }
+
+/* forms */
+.form {
+  padding: 1em;
+  height: auto;
+  background-color: #eeeeee; }
+  @media only screen and (min-width: 768px) {
+    .form {
+      padding: 1em 4em; } }
+  .form__functions {
+    padding: 0.5em 0; }
+    @media only screen and (min-width: 768px) {
+      .form__functions {
+        -webkit-flex-flow: row nowrap;
+        -moz-flex-flow: row nowrap;
+        -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        -webkit-justify-content: start;
+        -moz-justify-content: start;
+        -ms-justify-content: start;
+        justify-content: start;
+        -ms-flex-pack: start; } }
+  .form__input {
+    margin: 0 1em 1em 0;
+    padding: 0 0.5em;
+    height: 2.5em; }
+    @media only screen and (min-width: 768px) {
+      .form__input {
+        height: auto;
+        padding: 0.5em; } }
+
+/* buttons */
+.btn {
+  border: none;
+  cursor: pointer;
+  background-color: #4d4d4d;
+  color: white;
+  text-align: center;
+  transition: all 0.5s;
+  padding: 0 0.5em; }
+  .btn:focus {
+    outline: 0; }
+  @media only screen and (min-width: 768px) {
+    .btn {
+      padding: 0 2em; } }
+
+.btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s; }
+
+.btn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s; }
+
+.btn:hover span {
+  padding-right: 15px; }
+
+.btn:hover span:after {
+  opacity: 1;
+  right: 0; }
+
+/* font control */
 html {
   font-size: 1em; }
 
@@ -54,20 +169,3 @@ h4 {
 
 small, .font_small {
   font-size: 0.618em; }
-
-/* elements */
-.flex-container {
-  background-color: #4d4d4d; }
-  .flex-container__item {
-    flex: 1 1 auto; }
-
-.form {
-  padding: 1em 4em;
-  height: auto;
-  background-color: #eeeeee; }
-  .form__functions {
-    padding: 0.5em 0; }
-  .form__input {
-    margin: 0 1em 1em 0; }
-  .form__submit-btn {
-    cursor: pointer; }
