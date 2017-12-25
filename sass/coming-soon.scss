@@ -15,8 +15,8 @@
 
 /* partial imports */
 
-@import 'reset';
 @import 'var';
+@import 'reset';
 @import 'mix';
 
 
@@ -91,6 +91,7 @@
   transition: all 0.5s;
 	@include padding(0 .5em);
 	&:focus {outline:0;}
+	&:hover { background-color: $secondary-color; }
 	@include medium {
 		@include padding(0 2em)
 	}
@@ -109,6 +110,7 @@
   opacity: 0;
   top: 0;
   right: -10px;
+	font-size: 1em;
   transition: 0.5s;
 }
 
@@ -138,7 +140,7 @@ p {margin-bottom: 1.3em;}
 
 h1, h2, h3, h4 {
   margin: 1.414em 0 0.5em;
-	font-family: $khand;
+	font-family: $oswald;
   font-weight: inherit;
   line-height: 1.2;
 }

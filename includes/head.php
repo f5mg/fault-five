@@ -28,5 +28,5 @@
   }
 }
 </script>
-
+<link href="https://fonts.googleapis.com/css?family=Khand:400,700|Oswald:400,700|Permanent+Marker" rel="stylesheet">
 </head>
