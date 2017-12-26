@@ -47,6 +47,28 @@
 
 
 
+/* header */
+
+.header {
+	background-color: $primary-color-drk;
+	color: $secondary-color;
+	@include flexbox;
+	@include flex-flow(column nowrap);
+	@include justify-content(center);
+	
+	@include medium {
+		@include flex-flow(row nowrap);
+		@include justify-content(flex-start);
+	}
+	
+	@include e(title) {
+		font-family: $khand;
+		font-size: 3em;
+		@include padding(0 1em);
+		@include margin(0);
+	}
+}
+
 /* forms */
 
 .form {

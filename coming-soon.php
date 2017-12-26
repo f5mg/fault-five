@@ -10,11 +10,11 @@
 		<?php include ('includes/head.php'); ?>
 	  
 
-
+	
 	<body>
 		
 		<div class="flex-container header">
-			
+			<h2 class="header__title">Fault Five Media Group</h2>
 		</div>
 		
 		<div class="flex-container">
