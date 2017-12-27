@@ -53,36 +53,52 @@
 	background-color: $primary-color-drk;
 	color: $secondary-color;
 	@include flexbox;
-	@include flex-flow(column nowrap);
-	@include justify-content(center);
-	
-	@include medium {
-		@include flex-flow(row nowrap);
-		@include justify-content(flex-start);
-	}
+	@include flex-flow(row nowrap);
+	@include justify-content(flex-start);
 	
 	@include e(title) {
 		font-family: $khand;
-		font-size: 3em;
+		font-size: 1.5em;
 		@include padding(0 1em);
 		@include margin(0);
+		
+		@include medium {
+		font-size: 2em;
+		line-height:1.5;
+		}
+		
+		@include large {
+			
+		}
+	}
+	
+	@include e(stripe) {
+		background-color: $secondary-color;
+		left:0;
+		position: relative;
+		width: 1em;
+		display: block;
 	}
 }
 
 /* forms */
 
 .form {
+	@include flexbox;
+	@include flex-flow(column nowrap);
 	@include padding(1em);
 	height: auto;
 	background-color: $primary-color-lt; 
 	@include medium {
-		@include padding(1em 4em)
+		@include padding(1em 4em);
 	}
 	
 		@include e(functions) {
 			@include padding(.5em 0);
+			@include flexbox;
+			@include flex-direction(column);
 			@include medium {
-				@include flex-flow(row nowrap);
+				@include flex-direction(row);
 				@include justify-content(start);
 			}
 		}
@@ -92,8 +108,7 @@
 			@include padding(0 .5em);
 			height: 2.5em;
 			@include medium {
-				height: auto;
-				@include padding(.5em)
+				@include padding(.5em);
 			}
 		}
 }
@@ -112,10 +127,11 @@
   text-align: center;
   transition: all 0.5s;
 	@include padding(0 .5em);
+	@include margin( 0.25em 0);
 	&:focus {outline:0;}
 	&:hover { background-color: $secondary-color; }
 	@include medium {
-		@include padding(0 2em)
+		@include padding(0 1em 0 2em)
 	}
 }
 
@@ -128,16 +144,15 @@
 
 .btn span:after {
   content: '\00bb';
-  position: absolute;
   opacity: 0;
   top: 0;
-  right: -10px;
-	font-size: 1em;
+  right: -5px;
+	font-size: 1.5em;
   transition: 0.5s;
 }
 
 .btn:hover span {
-  padding-right: 15px;
+  padding-right: 5px;
 }
 
 .btn:hover span:after {

@@ -13,23 +13,24 @@
 	
 	<body>
 		
-		<div class="flex-container header">
-			<h2 class="header__title">Fault Five Media Group</h2>
+		<div class="header">
+			<div class="header__stripe">
+			</div>
+			<span class="header__title">Fault Five Media Group</span>
 		</div>
 		
-		<div class="flex-container">
-			<form class="flex-container__item form" action="" method="post">
+		
+		
+			<form class="form" action="" method="post">
 				<h4>Sign Up Here</h4>
 				<p>We will continue to send out our monthly emails providing tips and tricks on how to enhance your website's value.</p>
-			  <div class="flex-container__item form__functions">
+			  <div class="form__functions">
 				<input class="form__input" name"" value="Name" />
 				<input class="form__input" name"" value="Email" />
-				<button class="btn form__input" type="submit" name="send" value="send"><span>Send </span></button>
+				<button class="form__input" type="submit" name="" value="send"><span>Send </span></button>
 					
 				</div>
 			</form>
-			
-		</div>
 		
 
 	</body>
