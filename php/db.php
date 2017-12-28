@@ -1,16 +1,12 @@
-<?php $user = 'root';
-$password = 'root';
-$db = 'fault5_users';
-$host = 'localhost';
-$port = 22;
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "root";
+$dbname = "fault5_users";
 
-$link = mysqli_init();
-$success = mysqli_real_connect(
-   $link, 
-   $host, 
-   $user, 
-   $password, 
-   $db,
-   $port
-);
-?>
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 

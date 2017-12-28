@@ -29,11 +29,6 @@
 	@include flexbox;
 	@include flex-flow(column nowrap);
 	@include justify-content(center);
-	background-color: $primary-color-drk;
-	
-		@include medium {
-				@include flex-flow(row nowrap)
-		}
 
 		@include e(item) {
 			@include flexbox;
@@ -85,7 +80,7 @@
 
 .form {
 	@include flexbox;
-	@include flex-flow(column nowrap);
+	@include flex-direction(column);
 	@include padding(1em);
 	height: auto;
 	background-color: $primary-color-lt; 
@@ -111,8 +106,26 @@
 				@include padding(.5em);
 			}
 		}
+	
+		@include e(error) {
+			
+	}
 }
 
+.form-response {
+	@include flexbox;
+	@include flex-direction(column);
+	@include padding(1em);
+	height: auto;
+	background-color: $primary-color-lt; 
+	@include medium {
+		@include padding(1em 4em);
+	}
+	
+	@include e(message) {
+		
+	}
+}
 
 
 
