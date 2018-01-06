@@ -18,18 +18,8 @@
 			<span class="header__title">Fault Five Media Group</span>
 		</div>
 		
-		
-		
-			<form class="form" action="subscribe.php" method="post">
-				<h4>Stay in The Loop</h4>
-				<p>We will continue to send out our monthly emails providing tips and tricks on how to enhance your website's value.</p>
-			  <div class="form__functions">
-				<input class="form__input" name="name" placeholder="Name" />
-				<input class="form__input" name="email" placeholder="Email" />
-				<button class="form__input" type="submit" name="" value="send"><span>Send </span></button>
-				
-				</div>
-			</form>
+		<h4>Thank you!</h4>
+		<p>Thank you for signing up</p>
 		
 
 	</body>

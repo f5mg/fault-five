@@ -1,26 +1,33 @@
 {
-  "name": "fault-five-site",
+  "name": "fault-five",
   "version": "1.0.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/fault5/fault-five-site"
-  },
-  "private": true,
+  "description": "Fault Five Site",
   "main": "gruntfile.js",
   "dependencies": {
-    "coffeescript": "^2.1.0",
+    "coffee-script": "^1.12.7",
+    "coffeescript": "^2.1.1",
     "grunt": "^1.0.1",
-    "normalize.css": "^7.0.0"
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-sitemap": "^1.2.1"
   },
   "devDependencies": {
-    "grunt-browser-sync": "^2.2.0",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-cssmin": "^2.2.1",
-    "grunt-contrib-sass": "^1.0.0",
-    "grunt-contrib-uglify": "^3.1.0",
+    "grunt-contrib-uglify": "^3.3.0",
     "grunt-contrib-watch": "^1.0.0"
   },
-  "keywords": [],
-  "author": "David Solwold",
-  "license": "ISC"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/f5mg/fault-five.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/f5mg/fault-five/issues"
+  },
+  "homepage": "https://github.com/f5mg/fault-five#readme"
 }
