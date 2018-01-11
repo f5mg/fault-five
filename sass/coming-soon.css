@@ -72,7 +72,7 @@ html, body {
 
 /* header */
 .header {
-  background-color: rgba(77, 77, 77, 0.75);
+  background-color: #4d4d4d;
   color: #6cd42a;
   display: -webkit-box;
   display: -moz-box;
@@ -91,6 +91,9 @@ html, body {
   z-index: 100;
   width: 100%;
   position: fixed; }
+  @media only screen and (min-width: 768px) {
+    .header {
+      background-color: rgba(77, 77, 77, 0.75); } }
   .header__title {
     font-family: "Khand", sans-serif;
     font-size: 1.5em;
@@ -127,12 +130,12 @@ html, body {
 
 .parallax {
   height: 100%;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
   @media only screen and (min-width: 768px) {
-    .parallax .parallax {
+    .parallax {
       background-attachment: fixed; } }
 
 /* forms */

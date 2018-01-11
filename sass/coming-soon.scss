@@ -47,7 +47,10 @@ html, body {height: 100%;}
 /* header */
 
 .header {
-	background-color: $primary-color-drk--opacity-75;
+	background-color: $primary-color-drk;
+	@include medium {
+		background-color: $primary-color-drk--opacity-75;
+	}
 	color: $secondary-color;
 	@include flexbox;
 	@include flex-flow(row nowrap);
@@ -97,13 +100,13 @@ html, body {height: 100%;}
 
 .parallax { 
     height: 100%;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 		
-		@include medium () {
-		.parallax {background-attachment: fixed;}
+		@include medium {
+			background-attachment: fixed;
 		}
 }
 
