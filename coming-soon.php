@@ -1,7 +1,5 @@
  <!-- connects to database used for subscribers -->
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<base href="http://localhost/fault-five/">
-<base target="_blank" href="http://localhost/fault-five/">
 
 <!doctype html>
 

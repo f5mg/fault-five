@@ -85,7 +85,7 @@ html, body {height: 100%;}
 .main {
 	@include flexbox;
 	@include flex-flow(column nowrap);
-	background-image: url(../fault-five/images/sunset-man-mountain.jpg);
+	background-image: url(../images/sunset-man-mountain.jpg);
 
 	@include medium {
 		.main {
@@ -97,7 +97,7 @@ html, body {height: 100%;}
 
 .parallax { 
     height: 100%;
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
