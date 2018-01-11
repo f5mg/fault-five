@@ -4,9 +4,11 @@
 
 /*    1. partial imports          */
 /*    2. flexed elements          */
-/*    3. forms                    */
-/*    4. buttons                  */
-/*    5. font control             */
+/*    3. main layout elements     */
+/*    4. forms                    */
+/*    5. buttons                  */
+/*    6. banners                  */
+/*    7. font control             */
 
 
 
@@ -19,13 +21,14 @@
 @import 'reset';
 @import 'mix';
 
+html, body {height: 100%;}
 
 
 
 
 /* flexed elements */
 
-.flex-container {
+.flexed {
 	@include flexbox;
 	@include flex-flow(column nowrap);
 	@include justify-content(center);
@@ -38,18 +41,20 @@
 		}
 }
 
-	
 
 
 
 /* header */
 
 .header {
-	background-color: $primary-color-drk;
+	background-color: $primary-color-drk--opacity-75;
 	color: $secondary-color;
 	@include flexbox;
 	@include flex-flow(row nowrap);
 	@include justify-content(flex-start);
+	z-index: 100;
+	width: 100%;
+	position: fixed;
 	
 	@include e(title) {
 		font-family: $khand;
@@ -75,6 +80,36 @@
 		display: block;
 	}
 }
+
+
+.main {
+	@include flexbox;
+	@include flex-flow(column nowrap);
+	background-image: url(../fault-five/images/sunset-man-mountain.jpg);
+
+	@include medium {
+		.main {
+			@include flex-flow(row nowrap);
+		}
+	}
+}
+
+
+.parallax { 
+    height: 100%;
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+		
+		@include medium () {
+		.parallax {background-attachment: fixed;}
+		}
+}
+
+
+
+
 
 /* forms */
 
@@ -172,6 +207,10 @@
   opacity: 1;
   right: 0;
 }
+
+
+
+
 
 
 
