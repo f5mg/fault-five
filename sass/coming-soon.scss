@@ -91,9 +91,7 @@ html, body {height: 100%;}
 	background-image: url(../images/sunset-man-mountain.jpg);
 
 	@include medium {
-		.main {
 			@include flex-flow(row nowrap);
-		}
 	}
 }
 
@@ -110,7 +108,14 @@ html, body {height: 100%;}
 		}
 }
 
-
+.footer {
+	@include flexbox;
+	@include flex-flow(column nowrap);
+	
+	@include medium {
+		@include flex-flow(row nowrap);
+	}
+}
 
 
 

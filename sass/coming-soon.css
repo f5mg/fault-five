@@ -122,7 +122,7 @@ html, body {
   flex-flow: column nowrap;
   background-image: url(../images/sunset-man-mountain.jpg); }
   @media only screen and (min-width: 768px) {
-    .main .main {
+    .main {
       -webkit-flex-flow: row nowrap;
       -moz-flex-flow: row nowrap;
       -ms-flex-flow: row nowrap;
@@ -137,6 +137,23 @@ html, body {
   @media only screen and (min-width: 768px) {
     .parallax {
       background-attachment: fixed; } }
+
+.footer {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  -moz-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap; }
+  @media only screen and (min-width: 768px) {
+    .footer {
+      -webkit-flex-flow: row nowrap;
+      -moz-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap; } }
 
 /* forms */
 .form {

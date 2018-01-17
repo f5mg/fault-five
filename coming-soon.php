@@ -1,3 +1,4 @@
+ <?php include ('php/db.php'); ?>
  <!-- connects to database used for subscribers -->
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
@@ -26,9 +27,16 @@
 
 
 
-			<footer>
+			<div class="footer">
 
-
+				<div class="flexed__item">
+				<ul class="list">
+					<h5>
+					<li><a href="#"></a></li>
+				</ul>
+				</div>
+				<div class="flexed__item"></div>
+				
 				<form class="form" action="subscribe.php" method="post">
 					<h4>Stay in The Loop</h4>
 					<p>We will continue to send out our monthly emails providing tips and tricks on how to enhance your website's value.</p>
@@ -36,11 +44,10 @@
 						<input class="form__input" name="name" placeholder="Name"/>
 						<input class="form__input" name="email" placeholder="Email"/>
 						<button class="form__input" type="submit" name="" value="send"><span>Send </span></button>
-
-					</div>
+					</div><!-- 
 				</form>
 
-			</footer>
+		</div><!-- div.footer -->
 
 			<div class="banner banner--footer"> </div>
 
