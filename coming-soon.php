@@ -44,7 +44,7 @@
 						<input class="form__input" name="name" placeholder="Name"/>
 						<input class="form__input" name="email" placeholder="Email"/>
 						<button class="form__input" type="submit" name="" value="send"><span>Send </span></button>
-					</div><!-- 
+					</div>
 				</form>
 
 		</div><!-- div.footer -->

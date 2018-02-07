@@ -19,13 +19,12 @@
   box-sizing: border-box; }
 
 /*	     F5MG "MIXOLOGY"          */
-/*				  -->		<--						  */
-/*				-->	INDEX	<--						*/
-/*	   -->	mix.scss  <--		      */
-/*    1. Element Creation for BEM */
-/*    2. padding & margin         */
-/*    3. Media Queries            */
-/*    4. Flex Box                 */
+/*  color alpha  */
+/*    Element Creation for BEM */
+/*    padding & margin         */
+/*    Media Queries            */
+/*    Flex Box                 */
+/* color alpha */
 /* Element Creation for BEM */
 /* padding & margin */
 /* Media Queries */
@@ -257,6 +256,27 @@ html, body {
 .btn:hover span:after {
   opacity: 1;
   right: 0; }
+
+/* banners */
+.banner {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  -moz-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  background-color: #cfcfcf;
+  background-color: rgba(159, 159, 159, 0.5);
+  min-height: 200px; }
+  @media only screen and (min-width: 768px) {
+    .banner {
+      -webkit-flex-flow: row nowrap;
+      -moz-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap; } }
 
 /* font control */
 html {

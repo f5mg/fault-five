@@ -1,14 +1,23 @@
 /*	     F5MG "MIXOLOGY"          */
-/*				  -->		<--						  */
-/*				-->	INDEX	<--						*/
-/*	   -->	mix.scss  <--		      */
 
-/*    1. Element Creation for BEM */
-/*    2. padding & margin         */
-/*    3. Media Queries            */
-/*    4. Flex Box                 */
 
-   
+/*  color alpha  */
+/*    Element Creation for BEM */
+/*    padding & margin         */
+/*    Media Queries            */
+/*    Flex Box                 */
+
+
+ 
+/* color alpha */
+
+@mixin alpha-attribute($attribute, $color, $background) {
+  $percent: alpha($color) * 100%;
+  $opaque: opacify($color, 1);
+  $solid-color: mix($opaque, $background, $percent);
+  #{$attribute}: $solid-color;
+  #{$attribute}: $color;
+}
 
 
 /* Element Creation for BEM */

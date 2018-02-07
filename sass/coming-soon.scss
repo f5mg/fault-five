@@ -218,6 +218,21 @@ html, body {height: 100%;}
 
 
 
+/* banners */
+
+.banner {
+	
+	@include flexbox;
+	@include flex-flow(column nowrap);
+	@include alpha-attribute('background-color', rgba($primary-color, 0.5), white);
+	min-height: 200px;
+	@include e(--footer){
+	}
+	
+	@include medium {
+		@include flex-flow(row nowrap);
+	}
+}
 
 
 

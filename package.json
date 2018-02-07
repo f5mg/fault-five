@@ -5,13 +5,13 @@
   "main": "gruntfile.js",
   "dependencies": {
     "coffee-script": "^1.12.7",
-    "coffeescript": "^2.1.1",
     "grunt": "^1.0.1",
     "grunt-browser-sync": "^2.2.0",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-sitemap": "^1.2.1"
   },
   "devDependencies": {
+    "coffeescript": "^2.2.0",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-cssmin": "^2.2.1",
     "grunt-contrib-uglify": "^3.3.0",
