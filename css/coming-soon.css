@@ -1,13 +1,13 @@
 /*				 -->		 <--						*/
 /*				-->	INDEX	<--						*/
 /*	 -->	coming-soon.scss  <--		*/
-/*    1. partial imports          */
-/*    2. flexed elements          */
-/*    3. main layout elements     */
-/*    4. forms                    */
-/*    5. buttons                  */
-/*    6. banners                  */
-/*    7. font control             */
+/*    partial imports          */
+/*    flexed elements          */
+/*    main layout elements     */
+/*    forms                    */
+/*    buttons                  */
+/*    banners                  */
+/*    font control             */
 /* partial imports */
 /*	F5MG Variables  */
 /* Google Font Imports */
@@ -19,20 +19,18 @@
   box-sizing: border-box; }
 
 /*	     F5MG "MIXOLOGY"          */
-/*  color alpha  */
 /*    Element Creation for BEM */
 /*    padding & margin         */
 /*    Media Queries            */
 /*    Flex Box                 */
-/* color alpha */
 /* Element Creation for BEM */
 /* padding & margin */
 /* Media Queries */
 /* Flex Box */
+/* flexed elements */
 html, body {
   height: 100%; }
 
-/* flexed elements */
 .flexed {
   display: -webkit-box;
   display: -moz-box;
@@ -69,7 +67,7 @@ html, body {
     -ms-flex: 1 1 auto;
     flex: 1 1 auto; }
 
-/* header */
+/* main layout elements */
 .header {
   background-color: #4d4d4d;
   color: #6cd42a;
@@ -119,13 +117,34 @@ html, body {
   -moz-flex-flow: column nowrap;
   -ms-flex-flow: column nowrap;
   flex-flow: column nowrap;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  padding: 5em 10em;
   background-image: url(../images/sunset-man-mountain.jpg); }
-  @media only screen and (min-width: 768px) {
-    .main {
-      -webkit-flex-flow: row nowrap;
-      -moz-flex-flow: row nowrap;
-      -ms-flex-flow: row nowrap;
-      flex-flow: row nowrap; } }
+  .main__message {
+    background-color: rgba(159, 159, 159, 0.5);
+    height: auto;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+    -moz-flex-flow: column nowrap;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    padding: 5em 10em;
+    animation-name: fadeIn;
+    animation-duration: 2s; }
+    .main__message .a, .main__message .h2, .main__message .h3, .main__message .h4 {
+      margin-top: 0; }
 
 .parallax {
   height: 100%;
@@ -268,7 +287,6 @@ html, body {
   -moz-flex-flow: column nowrap;
   -ms-flex-flow: column nowrap;
   flex-flow: column nowrap;
-  background-color: #cfcfcf;
   background-color: rgba(159, 159, 159, 0.5);
   min-height: 200px; }
   @media only screen and (min-width: 768px) {
