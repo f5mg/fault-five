@@ -1,6 +1,6 @@
-/*				 -->		 <--						*/
-/*				-->	INDEX	<--						*/
-/*	 -->	coming-soon.scss  <--		*/
+/*	 -->		     <--	   */
+/*	 -->	INDEX	 <--	   */
+/*	 -->coming-soon.scss<--    */
 /*    partial imports          */
 /*    flexed elements          */
 /*    main layout elements     */
@@ -116,17 +116,13 @@ html, body {
   -webkit-flex-flow: column nowrap;
   -moz-flex-flow: column nowrap;
   -ms-flex-flow: column nowrap;
-  flex-flow: column nowrap;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-  -ms-flex-pack: center;
-  padding: 5em 10em;
-  background-image: url(../images/sunset-man-mountain.jpg); }
+  flex-flow: column nowrap; }
+  @media only screen and (min-width: 768px) {
+    .main {
+      background-image: url(../images/sunset-man-mountain.jpg); } }
   .main__message {
-    background-color: rgba(159, 159, 159, 0.5);
     height: auto;
+    color: white;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -136,18 +132,29 @@ html, body {
     -moz-flex-flow: column nowrap;
     -ms-flex-flow: column nowrap;
     flex-flow: column nowrap;
+    padding: 1em;
     -webkit-align-items: center;
     -moz-align-items: center;
     -ms-align-items: center;
-    align-items: center;
-    padding: 5em 10em;
-    animation-name: fadeIn;
-    animation-duration: 2s; }
+    align-items: center; }
     .main__message .a, .main__message .h2, .main__message .h3, .main__message .h4 {
       margin-top: 0; }
+    @media only screen and (min-width: 768px) {
+      .main__message {
+        padding: 5em 10em;
+        -webkit-flex-flow: row nowrap;
+        -moz-flex-flow: row nowrap;
+        -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        animation-name: fadeIn;
+        animation-duration: 2s; } }
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); }
 
 .parallax {
-  height: 100%;
   background-attachment: scroll;
   background-position: center;
   background-repeat: no-repeat;
@@ -174,6 +181,9 @@ html, body {
       flex-flow: row nowrap; } }
 
 /* forms */
+input[type="submit"] {
+  border-radius: none; }
+
 .form {
   display: -webkit-box;
   display: -moz-box;
@@ -186,6 +196,7 @@ html, body {
   flex-direction: column;
   padding: 1em;
   height: auto;
+  color: #4d4d4d;
   background-color: #eeeeee; }
   @media only screen and (min-width: 768px) {
     .form {

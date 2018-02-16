@@ -1,13 +1,13 @@
-/*				 -->		 <--						*/
-/*				-->	INDEX	<--						*/
-/*	 -->	coming-soon.scss  <--		*/
-/*    1. partial imports          */
-/*    2. flexed elements          */
-/*    3. main layout elements     */
-/*    4. forms                    */
-/*    5. buttons                  */
-/*    6. banners                  */
-/*    7. font control             */
+/*	 -->		     <--	   */
+/*	 -->	INDEX	 <--	   */
+/*	 -->coming-soon.scss<--    */
+/*    partial imports          */
+/*    flexed elements          */
+/*    main layout elements     */
+/*    forms                    */
+/*    buttons                  */
+/*    banners                  */
+/*    font control             */
 /* partial imports */
 /*	F5MG Variables  */
 /* Google Font Imports */
@@ -19,21 +19,18 @@
   box-sizing: border-box; }
 
 /*	     F5MG "MIXOLOGY"          */
-/*				  -->		<--						  */
-/*				-->	INDEX	<--						*/
-/*	   -->	mix.scss  <--		      */
-/*    1. Element Creation for BEM */
-/*    2. padding & margin         */
-/*    3. Media Queries            */
-/*    4. Flex Box                 */
+/*    Element Creation for BEM */
+/*    padding & margin         */
+/*    Media Queries            */
+/*    Flex Box                 */
 /* Element Creation for BEM */
 /* padding & margin */
 /* Media Queries */
 /* Flex Box */
+/* flexed elements */
 html, body {
   height: 100%; }
 
-/* flexed elements */
 .flexed {
   display: -webkit-box;
   display: -moz-box;
@@ -70,7 +67,7 @@ html, body {
     -ms-flex: 1 1 auto;
     flex: 1 1 auto; }
 
-/* header */
+/* main layout elements */
 .header {
   background-color: #4d4d4d;
   color: #6cd42a;
@@ -119,17 +116,45 @@ html, body {
   -webkit-flex-flow: column nowrap;
   -moz-flex-flow: column nowrap;
   -ms-flex-flow: column nowrap;
-  flex-flow: column nowrap;
-  background-image: url(../images/sunset-man-mountain.jpg); }
+  flex-flow: column nowrap; }
   @media only screen and (min-width: 768px) {
     .main {
-      -webkit-flex-flow: row nowrap;
-      -moz-flex-flow: row nowrap;
-      -ms-flex-flow: row nowrap;
-      flex-flow: row nowrap; } }
+      background-image: url(../images/sunset-man-mountain.jpg); } }
+  .main__message {
+    height: auto;
+    color: white;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+    -moz-flex-flow: column nowrap;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    padding: 1em;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center; }
+    .main__message .a, .main__message .h2, .main__message .h3, .main__message .h4 {
+      margin-top: 0; }
+    @media only screen and (min-width: 768px) {
+      .main__message {
+        padding: 5em 10em;
+        -webkit-flex-flow: row nowrap;
+        -moz-flex-flow: row nowrap;
+        -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        animation-name: fadeIn;
+        animation-duration: 2s; } }
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); }
 
 .parallax {
-  height: 100%;
   background-attachment: scroll;
   background-position: center;
   background-repeat: no-repeat;
@@ -156,6 +181,9 @@ html, body {
       flex-flow: row nowrap; } }
 
 /* forms */
+input[type="submit"] {
+  border-radius: none; }
+
 .form {
   display: -webkit-box;
   display: -moz-box;
@@ -168,6 +196,7 @@ html, body {
   flex-direction: column;
   padding: 1em;
   height: auto;
+  color: #4d4d4d;
   background-color: #eeeeee; }
   @media only screen and (min-width: 768px) {
     .form {
@@ -257,6 +286,26 @@ html, body {
 .btn:hover span:after {
   opacity: 1;
   right: 0; }
+
+/* banners */
+.banner {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  -moz-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  background-color: rgba(159, 159, 159, 0.5);
+  min-height: 200px; }
+  @media only screen and (min-width: 768px) {
+    .banner {
+      -webkit-flex-flow: row nowrap;
+      -moz-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap; } }
 
 /* font control */
 html {

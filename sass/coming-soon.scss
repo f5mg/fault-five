@@ -1,6 +1,6 @@
-/*				 -->		 <--						*/
-/*				-->	INDEX	<--						*/
-/*	 -->	coming-soon.scss  <--		*/
+/*	 -->		     <--	   */
+/*	 -->	INDEX	 <--	   */
+/*	 -->coming-soon.scss<--    */
 
 /*    partial imports          */
 /*    flexed elements          */
@@ -39,7 +39,7 @@ html, body {height: 100%;}
 			@include flexbox;
 			@include flex-flow(column nowrap);
 			@include justify-content(center);
-			@include flex( 1 1 auto);
+			@include flex(1 1 auto);
 		}
 }
 
@@ -51,7 +51,7 @@ html, body {height: 100%;}
 .header {
 	background-color: $primary-color-drk;
 	@include medium {
-		background-color: $primary-color-drk--opacity-75;
+		background-color: rgba($primary-color-drk, .75);
 	}
 	color: $secondary-color;
 	@include flexbox;
@@ -90,33 +90,40 @@ html, body {height: 100%;}
 .main {
 	@include flexbox;
 	@include flex-flow(column nowrap);
-	@include justify-content(center);
-	@include padding(5em 10em);
-	background-image: url(../images/sunset-man-mountain.jpg);
-
+	
+	@include medium {
+		background-image: url(../images/sunset-man-mountain.jpg);
+	}
 	
 	
 	@include e(message) {
-		
-		background-color:  rgba( $primary-color, .5);
 		height: auto;
+		color: white;
 		@include flexbox;
 		@include flex-flow(column nowrap);
+		@include padding(1em);
 		@include align-items(center);
-		@include padding(5em 10em);
-		animation-name: fadeIn;
-		animation-duration: 2s;
 		
 		& .a, .h2, .h3, .h4, {
 			margin-top: 0;
 		}
-
+		
+		@include medium {
+			@include padding(5em 10em);
+			@include flex-flow(row nowrap);
+			animation-name: fadeIn;
+			animation-duration: 2s;
+		}
 	}
 }
 
+.overlay {
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(black, .50);
+}
 
 .parallax { 
-    height: 100%;
     background-attachment: scroll;
     background-position: center;
     background-repeat: no-repeat;
@@ -140,11 +147,16 @@ html, body {height: 100%;}
 
 /* forms */
 
+input[type="submit"] {
+	border-radius: none;
+}
+
 .form {
 	@include flexbox;
 	@include flex-direction(column);
 	@include padding(1em);
 	height: auto;
+	color: $primary-color-drk;
 	background-color: $primary-color-lt; 
 	@include medium {
 		@include padding(1em 4em);
@@ -195,16 +207,17 @@ html, body {height: 100%;}
 /* buttons */
 
 .btn {
-  border: none;
-  cursor: pointer;
+	border: none;
+	cursor: pointer;
 	background-color: $primary-color-drk;
 	color: white;
-  text-align: center;
-  transition: all 0.5s;
+	text-align: center;
+	transition: all 0.5s;
 	@include padding(0 .5em);
 	@include margin( 0.25em 0);
 	&:focus {outline:0;}
 	&:hover { background-color: $secondary-color; }
+	
 	@include medium {
 		@include padding(0 1em 0 2em)
 	}
