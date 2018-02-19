@@ -14,65 +14,59 @@
 
 	<body>
 		<div class="header">
-			<div class="header__stripe">
-			</div>
+			<div class="header__stripe"></div>
 			<span class="header__title">Fault Five Media Group</span>
-			<div class="main-nav">
 			
-			</div><!--main-nav-->
-			</div><!--header-->
-
-			<div class="main parallax">
-				<div class="overlay">
-				
-					<div class="main__message">
-					
-						<div class="flexed__item">
-						<h3>Invest in Your Online Presence</h3>
-						
-						</div>
-						
-						<div class="flexed__item">
-						<h3>Draw Customers to Your Website</h3>
-						</div>
-						
-						
-						
-					</div><!--flexed-->
-				</div><!--overlay-->
-			</div><!--main-->
-
-			<form class="form" action="subscribe.php" method="post">
-				<h4>Stay in The Loop</h4>
-				<p>We will continue to send out our monthly emails providing tips and tricks on how to enhance your website's value.</p>
-				<div class="form__functions">
-					<input class="form__input" name="name" placeholder="Name"/>
-					<input class="form__input" name="email" placeholder="Email"/>
-					<button class="form__input" type="submit" name="" value="send"><span>Send </span></button>
-				</div><!--form__funtions-->
-			</form>
-
-
-
-			<div class="footer">
-
-				<div class="flexed__item">
+			<!-- move full main nav into PHP include for global modifications -->
+			<div class="js-main-nav">
 				<ul class="list">
-				 
+					<li><a href="#">About</a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">Affiliates</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div><!--main-nav-->
+		</div><!--header-->
+
+		<div class="main parallax">
+			<div class="overlay">
+			<h2 class="main__header">The Time to Grow Your Online Business is NOW</h2>
+				<div class="box">
+
+					<div class="flexed__item">
+					<h3 class="box__header">Invest in Your Online Presence</h3>
+					</div>
+
+					<div class="flexed__item">
+					<h3 class="box__header">Draw Customers to Your Website</h3>
+					</div>
+			
+				</div><!--box-->
+			</div><!--overlay-->
+		</div><!--main-->
+
+		<form class="form" action="subscribe.php" method="post">
+			<h4>Stay in The Loop</h4>
+			<p>We will continue to send out our monthly emails providing tips and tricks on how to enhance your website's value.</p>
+			<div class="form__functions">
+				<input class="form__input" name="name" placeholder="Name"/>
+				<input class="form__input" name="email" placeholder="Email"/>
+				<button class="form__input btn" type="submit" name="" value="send"><span>Send </span></button>
+			</div><!--form__funtions-->
+		</form>
+
+
+
+		<div class="footer">
+			<div class="flexed__item">
+				<ul class="list">
 					<li><a href="#"></a></li>
 				</ul>
-				</div>
-					
-				<div class="flexed__item"></div>
-				
+			</div>
 			
-
+			<div class="flexed__item"></div>
 		</div><!-- div.footer -->
 
-			<div class="banner banner--footer"> 
-				
-				</div>
-
+		<div class="banner banner--footer"></div>
 	</body>
-
 </html>

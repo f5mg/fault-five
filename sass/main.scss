@@ -4,16 +4,7 @@
 @import 'mix';
 
 
- 
 
-.main-nav{ 
-	background-color: $primary-color-drk;
-	
-	
-	@include e(link) {
-		color: $secondary-color;
-	}
-}
 
 .js-postcard-menu{
 	@include flexbox;

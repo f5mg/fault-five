@@ -19,7 +19,7 @@
 {
   "@context": "http://schema.org",
   "@type": "Organization",
-  "url": "http://www.fault5.com",
+  "url": "https://www.fault5.com",
   "name": "Fault Five Media Group",
   "contactPoint": {
     "@type": "ContactPoint",
