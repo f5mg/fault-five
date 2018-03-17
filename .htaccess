@@ -1,5 +1,5 @@
 #Alternate default index page
-DirectoryIndex coming-soon.php index.php
+DirectoryIndex index.php
 
 RewriteEngine On
 RewriteRule ^([a-z-]+)\/?$ $1.php [NC]
