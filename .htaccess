@@ -4,6 +4,7 @@ DirectoryIndex index.php
 RewriteEngine On
 RewriteRule ^([a-z-]+)\/?$ $1.php [NC]
 
+
 ## EXPIRES CACHING ##
 <IfModule mod_expires.c>
 ExpiresActive On

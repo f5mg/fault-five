@@ -3,11 +3,21 @@
 /* Google Font Imports */
 
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+
+@import url('https://fonts.googleapis.com/css?family=Khand:400,700|Oswald:400,700|Permanent+Marker');
+
+$khand: 'Khand', sans-serif;
 
 $fjalla: 'Fjalla One', sans-serif;
+$tillium: 'Titillium Web', sans-serif;
 
 /* color scheme */
 
 $primary-color: #F5F5F5;
 $accent-color: #990000;
+$accent-color-lt: #ff0000;
+
+$dark-grey: #696969;
+$light-grey: #D3D3D3;
 

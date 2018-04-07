@@ -10,6 +10,7 @@ html, body {
 
 	height: 100%;
 	width: 100%;
+	overflow-x: hidden;
 	
 }
 
@@ -19,67 +20,353 @@ body {background-color: $primary-color;}
 
 .header {
 @include flexbox;
-@include flex-flow(row nowrap);
+@include flex-flow(column wrap);
+@include align-items(center);
 @include justify-content(center);
+margin-top: 50px;
+min-height: 50vh;
+background-image: url(../images/lake-1920.jpeg);
+background-position: bottom;
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+
+@include medium {
+	margin-top: 0;
+}
+
+	& a {
+	text-decoration: none;
+	color: black;
+	}
+
+	& span {
+	font-size: 1.5em;
+	}
 }
 
 
-.js-nav {
-	height: 3em;
-	line-height: 3em;
-	@include flexbox;
-	@include flex-flow(row nowrap);
-	@include justify-content(flex-end);
-	
-	& ul {
-	@include flexbox;
-	@include flex-flow(column nowrap);
+
+.logo {
+	font-size: 2.2em;
+	margin: 1em;
 	
 	@include medium {
-		@include flex-flow(row nowrap);
-	}
-	}
-}
-
-
-
-.overlay {
-	max-width: 100%;
-	height: 100%;
-	background-color: rgba(black, .50);
-}
-
-
-.parallax { 
-    background-attachment: scroll;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+				margin: 0!important;
+			}
+	
+		& img {
+		width: 100%; 
+		transform: translateX(0px);
 		
 		@include medium {
-			background-attachment: fixed;
+		font-size: 6.6em;
+		transform: translateX(-150px);
 		}
+		}
+	
+	
+	
 }
+
+
+.menu-btn {
+	position: absolute;
+	z-index: 100;
+	@include padding(.5em 2em);
+	width: 100%;
+	background-color: $primary-color;
+	box-shadow: 2px 2px 20px 2px black;
+	
+	@include medium {
+	position: absolute;
+	z-index: 100;
+	@include padding(2em);
+	background-color: transparent;
+	box-shadow: none;
+	width: auto;
+	}
+	
+	& a {
+		font-size: 1.5em!important;
+		text-decoration: none;
+		color: black;
+		cursor: pointer;
+		
+		@include medium {
+			font-size: 2em!important;
+		}
+	}
+}
+
+
+
+.fullpage-menu {
+width: 100%;
+height: 100%;
+position: absolute;
+display: block;
+background-color: rgba(253,253,253,1.0);
+z-index: 200;
+
+@include medium {
+	background-color: rgba(253,253,253,.95);
+}
+
+	&--hidden {
+		display: none;
+	}
+	
+	@include e(field) {
+		width: 100%;
+		@include flexbox;
+		@include align-items(center);
+		@include justify-content(center);
+		
+		@include medium {
+			height: 100%;
+		}
+	}
+
+	@include e(btn) {
+		position: relative;
+		@include padding(1em 2em);
+		z-index: 100;
+	
+		@include medium {
+		position: absolute;
+		}
+	
+		& a {
+			font-size: 4em!important;
+			text-decoration: none;
+			color: black;
+			cursor: pointer;
+		}
+	}
+
+	& ul {
+		@include flexbox;
+		@include flex-flow(column nowrap);
+	}
+	
+	& li {
+		@include margin(0 1em);
+		text-align: center;
+	}
+	
+	& li a {
+		font-size: 4em!important;
+		text-decoration: none;
+		color: black;
+		transition-duration: .3s;
+		
+		@include medium {
+			&:hover {
+				font-size: 4.5em!important;
+				color: $light-grey;
+				transition-duration: .3s;
+			}
+		}
+	}
+}
+
+
+
+.main {
+	@include flexbox;
+	@include flex-flow(column wrap);
+	@include justify-content(center);
+	@include align-items(center);
+	padding-bottom: 4em;
+	
+	@include e(field) {
+		min-height: 2em;
+	}
+}
+
+
+.separator {
+	height: 1px;
+	width: 100%;
+	background-color: black;
+	@include margin(3em 0);
+}
+
+.banner {
+	@include flexbox;
+	@include flex-flow(column wrap);
+	width: 100vw;
+	
+	&--water-bg {
+			background-image: url(../images/lake-1920.jpeg);
+			background-position: bottom;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+	}
+	
+	&--row {
+			@include medium {
+			@include flex-flow(row nowrap);
+			@include justify-content(space-around);
+		}
+	}
+	
+	&--rev-ord {
+	
+	@include medium {
+		@include flex-flow(row-reverse nowrap);
+	}
+	}
+	
+	@include medium {
+		@include margin(1em);
+		@include padding(1em 5em);
+	}
+
+	@include e(section) {
+		@include flexbox;
+		@include flex-flow(column wrap);
+		@include padding(1em 2.5em);
+		
+		&--center {
+		@include justify-content(center);
+		@include align-items(center);
+		
+		@include medium {
+			@include flex(1);
+			}
+		}
+		
+		& span {
+			font-size: 2.5em;
+		}
+		
+		& p {
+			font-size: 1.5em;
+		}
+	}
+	
+	@include e(header) {
+		@include flexbox;
+		@include flex-flow(row wrap);
+		
+		&--center {
+		@include justify-content(center);
+		}
+	}
+}
+
+
+
+
+.text-field {
+
+	@include padding(1em);
+	
+	@include medium {
+		@include padding(3em);
+	}
+		
+		& img {
+			box-shadow: 5px 5px 20px 1px rgba(0,0,0, .25);
+			margin: 3em auto;
+			
+		}
+		
+		& span {
+			font-size: 2.5em;
+		}
+		
+		& p {
+			font-size: 1.5em;
+		}
+		
+		@include e(image) {
+			
+		  @include flexbox;
+			@include flex-flow(column nowrap);
+			text-align: center;
+			
+			@include medium {
+				margin: 40px;
+			}
+			
+			& span {
+				font-size: 1.25em;
+			}
+		}
+	}
+
+
 
 .footer {
 	@include flexbox;
-	@include flex-flow(column nowrap);
+	@include flex-flow(column wrap);
+	@include justify-content(space-around);
+	@include padding(2em);
+	background: linear-gradient(black, $dark-grey);
+	color: white;
 	
 	@include medium {
-		@include flex-flow(row nowrap);
+		@include flex-flow(row wrap);
 	}
-}
+	
+		@include e(field) {
+			@include flexbox;
+			@include flex-flow(column wrap);
+			
 
-/* lists & anchors */
+		}
+		
+		@include e(nav) {
+			@include flexbox;
+			@include flex-flow(column nowrap);
+			@include align-items(center);
+			@include justify-content(center);
+			@include padding(0 1em);
+			width: 100%;
+			min-height: 2em;
+			line-height: 2em;
+			
+			@include medium {
+				@include flex-flow(row nowrap);
+				@include align-items(center);
+			}
+			
+			& span {
+			float: left;
+			@include margin(0 1em);
+			}
+			
+			& ul{
+			width: auto;
+			float: right;
+			}
+			
+			& li{
+			display: inline;
+			@include margin(0 1em);
+			cursor: pointer;
+			}
+			
+			& a:hover{
+				color: $light-grey;
+			}
+			
+			}
+		}
+		
+
+
+
+
+/* lists */
 
 .list {
 	list-style-type: none;
 	
-}
-
-.list li {
-	display: inline;
-	margin-right: 2em;
 }
 
 .list a {
@@ -87,33 +374,51 @@ body {background-color: $primary-color;}
 	font-size: 1em;
 	font-family: $fjalla;
 	text-decoration: none;
-	text-transform: uppercase;
 }
+
+
+
 
 
 /* forms */
 
 input[type="submit"] {
+	display: inline-block;
 	border-radius: none;
+	cursor: pointer;
+	transition-duration: .5s;
+}
+
+input[type="submit"]:hover {
+color: white;
+border-radius: none;
+border: 2px solid $accent-color;
+background-color: $accent-color;
+transition-duration: .5s;
 }
 
 .form {
 	@include flexbox;
 	@include flex-direction(column);
 	@include padding(1em);
-	height: auto; 
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	
 	@include medium {
 		@include padding(1em 4em);
+		width: 50%;
 	}
+	
+	& p {
+		font-size: 1.5em;
+	}
+	
 	
 		@include e(functions) {
 			@include padding(.5em 0);
 			@include flexbox;
 			@include flex-direction(column);
-			@include medium {
-				@include flex-direction(row);
-				@include justify-content(start);
-			}
 		}
 
 		@include e(input) {
@@ -148,8 +453,65 @@ input[type="submit"] {
 
 
 
+/* buttons */
+
+.btn {
+	display: inline-block;
+	@include padding(.5em 1.5em);
+	background-color: black;
+	color: white;
+	text-align: center;
+	transition-duration: .5s;
+	
+	&:hover {
+		background-color: $accent-color;
+		transition-duration: .5s;
+		transform: translateY(-.5em);
+		box-shadow: 0 5px 10px 0 rgba(0,0,0, .33);
+	}
+	
+	& a {
+	color: inherit;
+	font-size: 1.5em;
+	font-family: $fjalla;
+	text-decoration: none;
+	transition-duration: .5s;
+	
+	&:hover{
+				color: white;
+				transition-duration: .5s;
+			}
+	}
+}
+
+
+
+
+
+/* ICONS */
+
+.icon {
+	display: inline-block;
+	@include margin(.5em);
+	border-radius: 50%;
+	font-size: 4em;
+	background-color: $accent-color;
+	color: white;
+}
+
+.svg-inline--fa {
+	margin: .5em;
+}
+
+
+
+
 
 /* font control */
+
+.center-text {
+	text-align: center;
+}
 
 html {font-size: 1em;}
 
