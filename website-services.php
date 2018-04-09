@@ -25,7 +25,7 @@
 					<div class="icon"><i class="fas fa-search"></i></div><!-- icon -->
 					
 					<span>SEO Services</span>
-					<p class="center-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at arcu nunc. Praesent maximus sed metus at semper. Vivamus iaculis, nisi a consequat rhoncus, eros orci porttitor diam, eget malesuada justo orci vitae libero.</p>
+					<p class="center-text">Get found when the stakes are high. Your next customer is trying to find your website and we are here to put you on the mark. Start winning with Purposeful Search Engine Optimization.</p>
 					
 					<div class="btn"><a href="#">Learn More</a></div>
 					
@@ -36,7 +36,7 @@
 					<div class="icon"><i class="fas fa-wrench"></i></div><!-- icon -->
 					
 					<span>Web Development</span>
-					<p class="center-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at arcu nunc. Praesent maximus sed metus at semper. Vivamus iaculis, nisi a consequat rhoncus, eros orci porttitor diam, eget malesuada justo orci vitae libero.</p>
+					<p class="center-text">Let's provide the perfect customer experience together. Your website should be the resource your customers desperately want. With a well-planned design and beautiful imagery, your new website will sell.</p>
 					
 					<div class="btn"><a href="#">Learn More</a></div>
 					
@@ -48,7 +48,7 @@
 					<div class="icon"><i class="fas fa-user"></i></div><!-- icon -->
 					
 					<span>Social Media</span>
-					<p class="center-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at arcu nunc. Praesent maximus sed metus at semper. Vivamus iaculis, nisi a consequat rhoncus, eros orci porttitor diam, eget malesuada justo orci vitae libero.</p>
+					<p class="center-text">We focus on more than just followers. We help you offer value to the world through a strong online presence that grows your brand and business. Stop leaving money on the table and start working with us today.</p>
 					
 					<div class="btn"><a href="#">Learn More</a></div>
 					

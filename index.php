@@ -56,22 +56,21 @@
 
 				<div class="banner banner--water-bg animated fadeIn ">
 					<div class="banner__section">
-						<div class="banner__image">
-					
-					</div><!-- banner image -->
-					</div>
-					<!-- banner section -->
-
-					<div class="banner__section">
 						<div class="banner__header">
 							<h2>2. GET FOUND</h2>
 						</div>
 						<!-- banner header -->
 
-						<span>SEO & Digital marketing strategies that’ll skyrocket your $ & clients.</span>
+						<span>SEO & Digital marketing strategies that’ll skyrocket your profits & clients.</span>
 					</div>
 					<!-- banner section -->
-
+					
+					<div class="banner__section">
+						<div class="banner__image">
+						<img src="images/get_found.jpg" width="100%"/>
+					</div><!-- banner image -->
+					</div>
+					<!-- banner section -->
 				</div>
 				<!-- banner -->
 
