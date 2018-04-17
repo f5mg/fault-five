@@ -242,13 +242,6 @@ body {
     -ms-flex-flow: column wrap;
     flex-flow: column wrap;
     padding: 1em 2.5em; }
-    @media only screen and (min-width: 768px) {
-      .banner__section {
-        -webkit-box-flex: 1;
-        -moz-box-flex: 1;
-        -webkit-flex: 1;
-        -ms-flex: 1;
-        flex: 1; } }
     .banner__section--center {
       -webkit-justify-content: center;
       -moz-justify-content: center;
@@ -259,6 +252,13 @@ body {
       -moz-align-items: center;
       -ms-align-items: center;
       align-items: center; }
+      @media only screen and (min-width: 768px) {
+        .banner__section--center {
+          -webkit-box-flex: 1;
+          -moz-box-flex: 1;
+          -webkit-flex: 1;
+          -ms-flex: 1;
+          flex: 1; } }
     .banner__section--row {
       -webkit-flex-flow: row nowrap;
       -moz-flex-flow: row nowrap;

@@ -93,7 +93,7 @@
 					<div class="graph-bar--2"></div>
 					<div class="graph-bar--3"></div>
 					<div class="graph-bar--4"></div>
-					<div class="graph-bar--1"></div>
+					<div class="graph-bar--5"></div>
 					</div>
 					<!-- banner section -->
 

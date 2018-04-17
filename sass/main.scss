@@ -228,13 +228,14 @@ z-index: 200;
 		@include flex-flow(column wrap);
 		@include padding(1em 2.5em);
 		
-		@include medium {
-			@include flex(1);
-			}
 		
 		&--center {
 		@include justify-content(center);
 		@include align-items(center);
+		
+		@include medium {
+			@include flex(1);
+			}
 		}
 		
 		&--row {
