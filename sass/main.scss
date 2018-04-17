@@ -51,9 +51,7 @@ background-attachment: fixed;
 	font-size: 2.2em;
 	margin: 1em;
 	
-	@include medium {
-				margin: 0!important;
-			}
+	
 	
 		& img {
 		width: 100%; 
@@ -230,13 +228,18 @@ z-index: 200;
 		@include flex-flow(column wrap);
 		@include padding(1em 2.5em);
 		
-		&--center {
-		@include justify-content(center);
-		@include align-items(center);
-		
 		@include medium {
 			@include flex(1);
 			}
+		
+		&--center {
+		@include justify-content(center);
+		@include align-items(center);
+		}
+		
+		&--row {
+		@include flex-flow(row nowrap);
+		@include justify-content(space-around);
 		}
 		
 		& span {
@@ -259,7 +262,31 @@ z-index: 200;
 }
 
 
+.graph-bar {
+	background-color: $accent-color;
+	width: 3em;
+	
+	&--1 {
+		height: 10em;
+	}
+	
+	&--2 {
+		height: 20em;
+	}
+	
+	&--1 {
+		height: 30em;
+	}
+	
+	&--1 {
+		height: 40em;
+	}
+	
+	&--1 {
+		height: 50em;
+	}
 
+}
 
 .text-field {
 

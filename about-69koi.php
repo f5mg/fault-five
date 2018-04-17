@@ -18,7 +18,7 @@
 	<div class="main">
 		<div class="main__field">
 			<div class="banner">
-				
+				<div class="banner__section">
 					<div class="banner__header banner__header--center">
 						<h2>Our Story</h2>
 					</div><!-- banner header -->
@@ -30,7 +30,7 @@
 					
 					<div class="text-field__image"><img src="images/bio_david.JPG" height="400" width="400" /><span>This is David Solwold.</span><span>Founder of 69Koi.</span><span>Remember this face. He is the control center of 69Koi and he is the guy you will talk to. The founder. The guy who quit the 9 to 5 in IT companies. Now he’s your pal.</span></div><!-- text-field image -->
 					</div><!-- banner text-field -->
-				
+				</div><!-- banner section -->
 			</div><!-- banner -->
 		</div><!-- main field -->
 		

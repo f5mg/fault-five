@@ -65,9 +65,6 @@ body {
 .logo {
   font-size: 2.2em;
   margin: 1em; }
-  @media only screen and (min-width: 768px) {
-    .logo {
-      margin: 0 !important; } }
   .logo img {
     width: 100%;
     transform: translateX(0px); }
@@ -245,6 +242,13 @@ body {
     -ms-flex-flow: column wrap;
     flex-flow: column wrap;
     padding: 1em 2.5em; }
+    @media only screen and (min-width: 768px) {
+      .banner__section {
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1; } }
     .banner__section--center {
       -webkit-justify-content: center;
       -moz-justify-content: center;
@@ -255,13 +259,16 @@ body {
       -moz-align-items: center;
       -ms-align-items: center;
       align-items: center; }
-      @media only screen and (min-width: 768px) {
-        .banner__section--center {
-          -webkit-box-flex: 1;
-          -moz-box-flex: 1;
-          -webkit-flex: 1;
-          -ms-flex: 1;
-          flex: 1; } }
+    .banner__section--row {
+      -webkit-flex-flow: row nowrap;
+      -moz-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+      -webkit-justify-content: space-around;
+      -moz-justify-content: space-around;
+      -ms-justify-content: space-around;
+      justify-content: space-around;
+      -ms-flex-pack: space-around; }
     .banner__section span {
       font-size: 2.5em; }
     .banner__section p {
@@ -282,6 +289,20 @@ body {
       -ms-justify-content: center;
       justify-content: center;
       -ms-flex-pack: center; }
+
+.graph-bar {
+  background-color: #990000;
+  width: 3em; }
+  .graph-bar--1 {
+    height: 10em; }
+  .graph-bar--2 {
+    height: 20em; }
+  .graph-bar--1 {
+    height: 30em; }
+  .graph-bar--1 {
+    height: 40em; }
+  .graph-bar--1 {
+    height: 50em; }
 
 .text-field {
   padding: 1em; }

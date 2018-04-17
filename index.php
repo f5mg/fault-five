@@ -43,12 +43,13 @@
 					<!-- banner section -->
 
 					<div class="banner__section">
-					<div class="banner__image">
-						<video width="100%" height="100%" autoplay>
-						<source src="images/site-build.mp4" type="video/mp4">
-						
-						</video>
-					</div><!-- banner image -->
+						<div class="banner__image">
+							<video width="100%" height="auto" autoplay>
+								<source src="images/site-build.mp4" type="video/mp4">
+
+							</video>
+						</div>
+						<!-- banner image -->
 					</div>
 					<!-- banner section -->
 				</div>
@@ -64,11 +65,12 @@
 						<span>SEO & Digital marketing strategies that’ll skyrocket your profits & clients.</span>
 					</div>
 					<!-- banner section -->
-					
+
 					<div class="banner__section">
 						<div class="banner__image">
-						<img src="images/get_found.jpg" width="100%"/>
-					</div><!-- banner image -->
+							<img src="images/get_found.jpg" width="100%"/>
+						</div>
+						<!-- banner image -->
 					</div>
 					<!-- banner section -->
 				</div>
@@ -86,10 +88,12 @@
 					</div>
 					<!-- banner section -->
 
-					<div class="banner__section">
-						<div class="banner__image">
-					
-					</div><!-- banner image -->
+					<div class="banner__section banner__section--row">
+					<div class="graph-bar--1"></div>
+					<div class="graph-bar--2"></div>
+					<div class="graph-bar--3"></div>
+					<div class="graph-bar--4"></div>
+					<div class="graph-bar--1"></div>
 					</div>
 					<!-- banner section -->
 
@@ -104,29 +108,31 @@
 		<!-- main -->
 
 
-<div class="footer__nav">
-	<span>69 KOI  &#169; Copyright 2018</span>
-	<ul class="list">
-	<li><a href="/privacy-policy.php">Privacy Policy</a></li>
-	<li><a href="/terms-conditions.php">Terms & Conditions</a></li>
-	</ul>
-	</div>
-		
-		
-		
-		
-		
-		<script type="application/javascript">
-function openMenu() {
-document.getElementById("fullpage-menu").classList.toggle("fullpage-menu--hidden");
-document.getElementById("menu-btn").classList.add("fullpage-menu--hidden");
-}
+		<div class="footer__nav">
+			<span>69 KOI  &#169; Copyright 2018</span>
+			<ul class="list">
+				<li><a href="/privacy-policy.php">Privacy Policy</a>
+				</li>
+				<li><a href="/terms-conditions.php">Terms & Conditions</a>
+				</li>
+			</ul>
+		</div>
 
-function closeMenu() {
-document.getElementById("fullpage-menu").classList.toggle("fullpage-menu--hidden");
-document.getElementById("menu-btn").classList.remove("fullpage-menu--hidden");
-}
-</script>
+
+
+
+
+		<script type="application/javascript">
+			function openMenu() {
+				document.getElementById( "fullpage-menu" ).classList.toggle( "fullpage-menu--hidden" );
+				document.getElementById( "menu-btn" ).classList.add( "fullpage-menu--hidden" );
+			}
+
+			function closeMenu() {
+				document.getElementById( "fullpage-menu" ).classList.toggle( "fullpage-menu--hidden" );
+				document.getElementById( "menu-btn" ).classList.remove( "fullpage-menu--hidden" );
+			}
+		</script>
 
 	</body>
 
