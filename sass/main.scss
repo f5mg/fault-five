@@ -11,9 +11,7 @@ html, body {
 	height: 100%;
 	width: 100%;
 	overflow-x: hidden;
-	
 }
-
 
 body {background-color: $primary-color;}
 
@@ -170,7 +168,6 @@ z-index: 200;
 }
 
 
-
 .main {
 	@include flexbox;
 	@include flex-flow(column wrap);
@@ -263,28 +260,69 @@ z-index: 200;
 }
 
 
+
 .graph-bar {
 	background-color: $accent-color;
 	width: 3em;
+	align-self: flex-end;
 	
+@keyframes bar1 {
+0% {height: 0em;}
+100% {height: 5em;}
+}
+
+@keyframes bar2 {
+0% {height: 0em;}
+100% {height: 10em;}
+}
+
+@keyframes bar3 {
+0% {height: 0em;}
+100% {height: 15em;}
+}
+
+@keyframes bar4 {
+0% {height: 0em;}
+100% {height: 20em;}
+}
+
+@keyframes bar5 {
+0% {height: 0em;}
+100% {height: 25em;}
+}
+
 	&--1 {
-		height: 10em;
+		animation-name: bar1;
+		animation-duration: 2s;
+		animation-fill-mode:forwards;
 	}
 	
 	&--2 {
-		height: 20em;
+		animation-name: bar2;
+		animation-duration: 2s;
+		animation-delay: .5s;
+		animation-fill-mode:forwards;
 	}
 	
-	&--1 {
-		height: 30em;
+	&--3 {
+		animation-name: bar3;
+		animation-duration: 2s;
+		animation-delay: 1s;
+		animation-fill-mode:forwards;
 	}
 	
-	&--1 {
-		height: 40em;
+	&--4 {
+		animation-name: bar4;
+		animation-duration: 2s;
+		animation-delay: 1.5s;
+		animation-fill-mode:forwards;
 	}
 	
-	&--1 {
-		height: 50em;
+	&--5 {
+		animation-name: bar5;
+		animation-duration: 2s;
+		animation-delay: 2s;
+		animation-fill-mode:forwards;
 	}
 
 }

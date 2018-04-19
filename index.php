@@ -44,9 +44,8 @@
 
 					<div class="banner__section">
 						<div class="banner__image">
-							<video width="100%" height="auto" autoplay>
-								<source src="images/site-build.mp4" type="video/mp4">
-
+							<video src="images/site-build.mp4" type="video/mp4" width="100%" height="auto" preload="yes">
+							<source src="images/site-build.mp4" type="video/mp4">
 							</video>
 						</div>
 						<!-- banner image -->
@@ -88,12 +87,12 @@
 					</div>
 					<!-- banner section -->
 
-					<div class="banner__section banner__section--row">
-					<div class="graph-bar--1"></div>
-					<div class="graph-bar--2"></div>
-					<div class="graph-bar--3"></div>
-					<div class="graph-bar--4"></div>
-					<div class="graph-bar--5"></div>
+					<div class="banner__section banner__section--row" style="min-height: 30em">
+					<div class="graph-bar" id="graph-bar--1"></div>
+					<div class="graph-bar" id="graph-bar--2"></div>
+					<div class="graph-bar graph-bar--3"></div>
+					<div class="graph-bar graph-bar--4"></div>
+					<div class="graph-bar graph-bar--5"></div>
 					</div>
 					<!-- banner section -->
 
@@ -122,7 +121,7 @@
 
 
 
-		<script type="application/javascript">
+		<script type="text/javascript">
 			function openMenu() {
 				document.getElementById( "fullpage-menu" ).classList.toggle( "fullpage-menu--hidden" );
 				document.getElementById( "menu-btn" ).classList.add( "fullpage-menu--hidden" );
@@ -132,6 +131,15 @@
 				document.getElementById( "fullpage-menu" ).classList.toggle( "fullpage-menu--hidden" );
 				document.getElementById( "menu-btn" ).classList.remove( "fullpage-menu--hidden" );
 			}
+			
+			 if ( window.scrollY > document.querySelector('#graph-bar--1') ) { 
+				document.querySelector('#graph-bar--1').classList.add('graph-bar--1'); 
+			}
+			
+			if ( window.scrollY > document.querySelector('#graph-bar--2') ) { 
+				document.querySelector('#graph-bar--2').classList.add('graph-bar--2'); 
+			}
+			
 		</script>
 
 	</body>

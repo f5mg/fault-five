@@ -28,7 +28,7 @@
 					<p>It all began with a simple passion: making money. It sounds cynical, I know. But the ability to relate to each company’s individual needs is what helps me establish effective mechanisms for digital development. At the end of the day, a business can always make more profit online. In fact, your business can multiply its profits. And it doesn’t matter what the budget is – it’s the idea that counts. For that, you need a good team that you can rely on. A team that is able to relate, believes in your business and sees its potential. A team that offers a unique digital marketing system and implements each step with diligence and a meticulous approach.</p>
 					<p>Our story is relatable. It all started with a passion in IT and quitting the 9 to 5. It started with a dream and a plan. 69Koi is a team of geniuses and rebels, designers and developers. We are growing and so are our partners. And now, meet David.</p>
 					
-					<div class="text-field__image"><img src="images/bio_david.JPG" height="400" width="400" /><span>This is David Solwold.</span><span>Founder of 69Koi.</span><span>Remember this face. He is the control center of 69Koi and he is the guy you will talk to. The founder. The guy who quit the 9 to 5 in IT companies. Now he’s your pal.</span></div><!-- text-field image -->
+					<div class="text-field__image"><img src="images/bio_david.JPG" height="auto" width="100%" /><span>This is David Solwold.</span><span>Founder of 69Koi.</span><span>Remember this face. He is the control center of 69Koi and he is the guy you will talk to. The founder. The guy who quit the 9 to 5 in IT companies. Now he’s your pal.</span></div><!-- text-field image -->
 					</div><!-- banner text-field -->
 				</div><!-- banner section -->
 			</div><!-- banner -->

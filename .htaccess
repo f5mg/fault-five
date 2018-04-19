@@ -33,4 +33,8 @@ ExpiresDefault "access 1 month"
 </IfModule>
 ## EXPIRES CACHING ##
 
+AddType video/ogg .ogv
+AddType video/mp4 .mp4
+AddType video/webm .webm
+
 
