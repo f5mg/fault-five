@@ -4,8 +4,8 @@
 <!doctype html>
 
 <head>
-	<title>69 KOI - Digital Marketing Agency | Website Design & SEO Services</title>
-	<meta name="Description" content="69 Koi is a web development and marketing company that Builds Profitable Websites backed by Purposeful Search Engine Optimization. Visit to Learn More!">
+	<title>Social Media Marketing | Digital Marketing Agency in Milwaukee | 69 KOI</title>
+	<meta name="Description" content="Get more than Just Followers with your Social Media Marketing. Click to Learn How You can Make Money with Social Media.">
 	<?php include ('includes/head.php'); ?>
 
 	<!-- head tag is closed within include: head.php -->

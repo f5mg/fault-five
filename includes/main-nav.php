@@ -9,11 +9,11 @@
 		</div><!-- fullpage menu btn -->
 		<div class="fullpage-menu__field">
 		<ul class="list">
-				<li><a href="../about-69koi.php"> Who We Are </a>
+				<li><a href="../digital-marketing-agency.php"> Who We Are </a>
 				</li>
-				<li><a href="../website-services.php"> What We Do </a>
+				<li><a href="../digital-marketing.php"> What We Do </a>
 				</li>
-				<li><a href="../contact.php"> Contact Us </a>
+				<li><a href="../contact-69-koi.php"> Contact Us </a>
 				</li>
 			</ul>
 			</div><!-- full page menu field -->

@@ -20,9 +20,8 @@
 /* Media Queries */
 /* Flex Box */
 html, body {
-  height: 100%;
-  width: 100%;
-  overflow-x: hidden; }
+  height: auto;
+  width: 100%; }
 
 body {
   background-color: #F5F5F5; }
@@ -46,7 +45,6 @@ body {
   -ms-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center;
-  margin-top: 50px;
   min-height: 50vh;
   background-image: url(../images/lake-1920.jpeg);
   background-position: bottom;
@@ -64,7 +62,11 @@ body {
 
 .logo {
   font-size: 2.2em;
-  margin: 1em; }
+  margin: 1em;
+  margin-top: 3em; }
+  @media only screen and (min-width: 768px) {
+    .logo {
+      margin-top: 1em; } }
   .logo img {
     width: 100%;
     transform: translateX(0px); }
@@ -74,7 +76,7 @@ body {
         transform: translateX(-150px); } }
 
 .menu-btn {
-  position: absolute;
+  position: fixed;
   z-index: 100;
   padding: 0.5em 2em;
   width: 100%;
@@ -82,7 +84,6 @@ body {
   box-shadow: 2px 2px 20px 2px black; }
   @media only screen and (min-width: 768px) {
     .menu-btn {
-      position: absolute;
       z-index: 100;
       padding: 2em;
       background-color: transparent;
@@ -100,13 +101,15 @@ body {
 .fullpage-menu {
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   display: block;
   background-color: #fdfdfd;
+  -webkit-overflow-scrolling: touch;
   z-index: 200; }
   @media only screen and (min-width: 768px) {
     .fullpage-menu {
-      background-color: rgba(253, 253, 253, 0.95); } }
+      background-color: rgba(253, 253, 253, 0.95);
+      position: fixed; } }
   .fullpage-menu--hidden {
     display: none; }
   .fullpage-menu__field {
@@ -203,7 +206,10 @@ body {
   -moz-flex-flow: column wrap;
   -ms-flex-flow: column wrap;
   flex-flow: column wrap;
-  width: 100vw; }
+  padding: 1vw 5vw; }
+  @media only screen and (min-width: 768px) {
+    .banner {
+      padding: 1em 5em; } }
   .banner--water-bg {
     background-image: url(../images/lake-1920.jpeg);
     background-position: bottom;
@@ -212,10 +218,10 @@ body {
     background-attachment: fixed; }
   @media only screen and (min-width: 768px) {
     .banner--row {
-      -webkit-flex-flow: row nowrap;
-      -moz-flex-flow: row nowrap;
-      -ms-flex-flow: row nowrap;
-      flex-flow: row nowrap;
+      -webkit-flex-flow: row wrap;
+      -moz-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
       -webkit-justify-content: space-around;
       -moz-justify-content: space-around;
       -ms-justify-content: space-around;
@@ -227,10 +233,6 @@ body {
       -moz-flex-flow: row-reverse nowrap;
       -ms-flex-flow: row-reverse nowrap;
       flex-flow: row-reverse nowrap; } }
-  @media only screen and (min-width: 768px) {
-    .banner {
-      margin: 1em;
-      padding: 1em 5em; } }
   .banner__section {
     display: -webkit-box;
     display: -moz-box;
@@ -241,7 +243,15 @@ body {
     -moz-flex-flow: column wrap;
     -ms-flex-flow: column wrap;
     flex-flow: column wrap;
+    -webkit-justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    -ms-justify-content: flex-start;
+    justify-content: flex-start;
+    -ms-flex-pack: flex-start;
     padding: 1em 2.5em; }
+    @media only screen and (min-width: 768px) {
+      .banner__section {
+        padding: 1em 2.5em; } }
     .banner__section--center {
       -webkit-justify-content: center;
       -moz-justify-content: center;
@@ -259,6 +269,12 @@ body {
           -webkit-flex: 1;
           -ms-flex: 1;
           flex: 1; } }
+    .banner__section--top {
+      -webkit-justify-content: flex-start;
+      -moz-justify-content: flex-start;
+      -ms-justify-content: flex-start;
+      justify-content: flex-start;
+      -ms-flex-pack: flex-start; }
     .banner__section--row {
       -webkit-flex-flow: row nowrap;
       -moz-flex-flow: row nowrap;
@@ -270,9 +286,15 @@ body {
       justify-content: space-around;
       -ms-flex-pack: space-around; }
     .banner__section span {
-      font-size: 2.5em; }
+      font-size: 5vw; }
+      @media only screen and (min-width: 768px) {
+        .banner__section span {
+          font-size: 2.5vw; } }
     .banner__section p {
-      font-size: 1.5em; }
+      font-size: 3vw; }
+      @media only screen and (min-width: 768px) {
+        .banner__section p {
+          font-size: 1.5vw; } }
   .banner__header {
     display: -webkit-box;
     display: -moz-box;
@@ -292,70 +314,84 @@ body {
 
 .graph-bar {
   background-color: #990000;
-  width: 3em;
+  width: 10vw;
   align-self: flex-end; }
+  @media only screen and (min-width: 768px) {
+    .graph-bar {
+      width: 5vw; } }
 @keyframes bar1 {
   0% {
     height: 0em; }
   100% {
-    height: 5em; } }
+    height: 5vw; } }
 @keyframes bar2 {
   0% {
     height: 0em; }
   100% {
-    height: 10em; } }
+    height: 10vw; } }
 @keyframes bar3 {
   0% {
     height: 0em; }
   100% {
-    height: 15em; } }
+    height: 15vw; } }
 @keyframes bar4 {
   0% {
     height: 0em; }
   100% {
-    height: 20em; } }
+    height: 20vw; } }
 @keyframes bar5 {
   0% {
     height: 0em; }
   100% {
-    height: 25em; } }
-  .graph-bar--1 {
+    height: 25vw; } }
+  .graph-bar--1-animate {
     animation-name: bar1;
-    animation-duration: 2s;
-    animation-fill-mode: forwards; }
-  .graph-bar--2 {
-    animation-name: bar2;
-    animation-duration: 2s;
-    animation-delay: .5s;
-    animation-fill-mode: forwards; }
-  .graph-bar--3 {
-    animation-name: bar3;
     animation-duration: 2s;
     animation-delay: 1s;
     animation-fill-mode: forwards; }
-  .graph-bar--4 {
-    animation-name: bar4;
+  .graph-bar--2-animate {
+    animation-name: bar2;
     animation-duration: 2s;
     animation-delay: 1.5s;
     animation-fill-mode: forwards; }
-  .graph-bar--5 {
-    animation-name: bar5;
+  .graph-bar--3-animate {
+    animation-name: bar3;
     animation-duration: 2s;
     animation-delay: 2s;
     animation-fill-mode: forwards; }
+  .graph-bar--4-animate {
+    animation-name: bar4;
+    animation-duration: 2s;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards; }
+  .graph-bar--5-animate {
+    animation-name: bar5;
+    animation-duration: 2s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards; }
 
 .text-field {
-  padding: 1em; }
+  padding: 1vw; }
   @media only screen and (min-width: 768px) {
     .text-field {
-      padding: 3em; } }
+      padding: 3vw; } }
   .text-field img {
     box-shadow: 5px 5px 20px 1px rgba(0, 0, 0, 0.25);
     margin: 3em auto; }
   .text-field span {
-    font-size: 2.5em; }
+    font-size: 5vw; }
+    @media only screen and (min-width: 768px) {
+      .text-field span {
+        font-size: 2.5vw; } }
   .text-field p {
-    font-size: 1.5em; }
+    font-size: 3vw; }
+    @media only screen and (max-width: 328px) {
+      .text-field p {
+        font-size: 7vw; } }
+    @media only screen and (min-width: 768px) {
+      .text-field p {
+        font-size: 1.5vw;
+        text-align: justify; } }
   .text-field__image {
     display: -webkit-box;
     display: -moz-box;
@@ -369,7 +405,8 @@ body {
     text-align: center; }
     @media only screen and (min-width: 768px) {
       .text-field__image {
-        margin: 40px; } }
+        margin: 40px auto;
+        width: 50%; } }
     .text-field__image span {
       font-size: 1.25em; }
 
@@ -539,7 +576,8 @@ input[type="submit"]:hover {
   background-color: black;
   color: white;
   text-align: center;
-  transition-duration: .5s; }
+  transition-duration: .5s;
+  cursor: pointer; }
   .btn:hover {
     background-color: #990000;
     transition-duration: .5s;
@@ -558,14 +596,25 @@ input[type="submit"]:hover {
 /* ICONS */
 .icon {
   display: inline-block;
-  margin: 0.5em;
+  margin: 0.5vw;
   border-radius: 50%;
-  font-size: 4em;
+  font-size: 10vw;
   background-color: #990000;
   color: white; }
+  @media only screen and (min-width: 768px) {
+    .icon {
+      display: inline-block;
+      margin: 0.5vw;
+      border-radius: 50vw;
+      font-size: 5vw;
+      background-color: #990000;
+      color: white; } }
 
 .svg-inline--fa {
-  margin: .5em; }
+  margin: 7vw; }
+  @media only screen and (min-width: 768px) {
+    .svg-inline--fa {
+      margin: 2vw; } }
 
 /* font control */
 .center-text {
@@ -583,23 +632,35 @@ p {
   margin-bottom: 1.3em; }
 
 h1, h2, h3, h4 {
-  margin: 1.414em 0 0.5em;
-  font-family: inherit;
-  font-weight: inherit;
-  line-height: 1.2; }
+  margin: 10vw 0 3vw; }
+  @media only screen and (min-width: 768px) {
+    h1, h2, h3, h4 {
+      margin: 1.414vw 0 1vw;
+      font-family: inherit;
+      font-weight: inherit;
+      line-height: 1.2; } }
 
 h1 {
   margin-top: 0;
   font-size: 6.854em; }
 
 h2 {
-  font-size: 4.236em; }
+  font-size: 10vw; }
+  @media only screen and (min-width: 768px) {
+    h2 {
+      font-size: 4.236em; } }
 
 h3 {
-  font-size: 2.618em; }
+  font-size: 5vw; }
+  @media only screen and (min-width: 768px) {
+    h3 {
+      font-size: 2.618em; } }
 
 h4 {
-  font-size: 1.618em; }
+  font-size: 4vw; }
+  @media only screen and (min-width: 768px) {
+    h4 {
+      font-size: 1.618em; } }
 
 small, .font_small {
   font-size: 0.618em; }

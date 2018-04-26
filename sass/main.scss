@@ -7,10 +7,9 @@
 
 
 html, body {
-
-	height: 100%;
+	height: auto;
 	width: 100%;
-	overflow-x: hidden;
+	
 }
 
 body {background-color: $primary-color;}
@@ -21,7 +20,6 @@ body {background-color: $primary-color;}
 @include flex-flow(column wrap);
 @include align-items(center);
 @include justify-content(center);
-margin-top: 50px;
 min-height: 50vh;
 background-image: url(../images/lake-1920.jpeg);
 background-position: bottom;
@@ -48,17 +46,21 @@ background-attachment: fixed;
 .logo {
 	font-size: 2.2em;
 	margin: 1em;
+	margin-top: 3em;
+	
+	@include medium {
+		margin-top: 1em;
+	}
 	
 	
-	
-		& img {
-		width: 100%; 
-		transform: translateX(0px);
-		
-		@include medium {
-		font-size: 6.6em;
-		transform: translateX(-150px);
-		}
+			& img {
+			width: 100%; 
+			transform: translateX(0px);
+
+			@include medium {
+				font-size: 6.6em;
+				transform: translateX(-150px);
+			}
 		}
 	
 	
@@ -67,7 +69,7 @@ background-attachment: fixed;
 
 
 .menu-btn {
-	position: absolute;
+	position: fixed;
 	z-index: 100;
 	@include padding(.5em 2em);
 	width: 100%;
@@ -75,7 +77,6 @@ background-attachment: fixed;
 	box-shadow: 2px 2px 20px 2px black;
 	
 	@include medium {
-	position: absolute;
 	z-index: 100;
 	@include padding(2em);
 	background-color: transparent;
@@ -100,13 +101,15 @@ background-attachment: fixed;
 .fullpage-menu {
 width: 100%;
 height: 100%;
-position: absolute;
+position: fixed;
 display: block;
 background-color: rgba(253,253,253,1.0);
+-webkit-overflow-scrolling: touch;
 z-index: 200;
 
 @include medium {
 	background-color: rgba(253,253,253,.95);
+	position: fixed;
 }
 
 	&--hidden {
@@ -191,7 +194,11 @@ z-index: 200;
 .banner {
 	@include flexbox;
 	@include flex-flow(column wrap);
-	width: 100vw;
+	@include padding(1vw 5vw);
+	
+	@include medium {
+		@include padding(1em 5em);
+	}
 	
 	&--water-bg {
 			background-image: url(../images/lake-1920.jpeg);
@@ -203,7 +210,7 @@ z-index: 200;
 	
 	&--row {
 			@include medium {
-			@include flex-flow(row nowrap);
+			@include flex-flow(row wrap);
 			@include justify-content(space-around);
 		}
 	}
@@ -214,16 +221,16 @@ z-index: 200;
 		@include flex-flow(row-reverse nowrap);
 	}
 	}
-	
-	@include medium {
-		@include margin(1em);
-		@include padding(1em 5em);
-	}
 
 	@include e(section) {
 		@include flexbox;
 		@include flex-flow(column wrap);
+		@include justify-content(flex-start);
 		@include padding(1em 2.5em);
+		
+		@include medium {
+		@include padding(1em 2.5em);
+		}
 		
 		
 		&--center {
@@ -235,17 +242,29 @@ z-index: 200;
 			}
 		}
 		
+		&--top {
+			@include justify-content(flex-start);
+		}
+		
 		&--row {
 		@include flex-flow(row nowrap);
 		@include justify-content(space-around);
 		}
 		
 		& span {
-			font-size: 2.5em;
+			font-size: 5vw;
+			
+			@include medium {
+			font-size: 2.5vw;
+			}
 		}
 		
 		& p {
-			font-size: 1.5em;
+			font-size: 3vw;
+			
+			@include medium {
+			font-size: 1.5vw;
+			}
 		}
 	}
 	
@@ -263,65 +282,70 @@ z-index: 200;
 
 .graph-bar {
 	background-color: $accent-color;
-	width: 3em;
+	width: 10vw;
 	align-self: flex-end;
+	
+	@include medium {
+		width: 5vw;
+	}
 	
 @keyframes bar1 {
 0% {height: 0em;}
-100% {height: 5em;}
+100% {height: 5vw;}
 }
 
 @keyframes bar2 {
 0% {height: 0em;}
-100% {height: 10em;}
+100% {height: 10vw;}
 }
 
 @keyframes bar3 {
 0% {height: 0em;}
-100% {height: 15em;}
+100% {height: 15vw;}
 }
 
 @keyframes bar4 {
 0% {height: 0em;}
-100% {height: 20em;}
+100% {height: 20vw;}
 }
 
 @keyframes bar5 {
 0% {height: 0em;}
-100% {height: 25em;}
+100% {height: 25vw;}
 }
 
-	&--1 {
+	&--1-animate {
 		animation-name: bar1;
-		animation-duration: 2s;
-		animation-fill-mode:forwards;
-	}
-	
-	&--2 {
-		animation-name: bar2;
-		animation-duration: 2s;
-		animation-delay: .5s;
-		animation-fill-mode:forwards;
-	}
-	
-	&--3 {
-		animation-name: bar3;
 		animation-duration: 2s;
 		animation-delay: 1s;
 		animation-fill-mode:forwards;
 	}
 	
-	&--4 {
-		animation-name: bar4;
+	&--2-animate {
+		animation-name: bar2;
 		animation-duration: 2s;
 		animation-delay: 1.5s;
 		animation-fill-mode:forwards;
 	}
 	
-	&--5 {
-		animation-name: bar5;
+	&--3-animate {
+		animation-name: bar3;
 		animation-duration: 2s;
 		animation-delay: 2s;
+		animation-fill-mode:forwards;
+	}
+	
+	&--4-animate {
+		animation-name: bar4;
+		animation-duration: 2s;
+		animation-delay: 2.5s;
+		animation-fill-mode:forwards;
+	}
+	
+	&--5-animate {
+		animation-name: bar5;
+		animation-duration: 2s;
+		animation-delay: 3s;
 		animation-fill-mode:forwards;
 	}
 
@@ -329,10 +353,10 @@ z-index: 200;
 
 .text-field {
 
-	@include padding(1em);
+	@include padding(1vw);
 	
 	@include medium {
-		@include padding(3em);
+		@include padding(3vw);
 	}
 		
 		& img {
@@ -342,11 +366,25 @@ z-index: 200;
 		}
 		
 		& span {
-			font-size: 2.5em;
+			font-size: 5vw;
+			
+			@include medium {
+			font-size: 2.5vw;
+			}
 		}
 		
 		& p {
-			font-size: 1.5em;
+		
+			@include small {
+			font-size: 7vw;
+			}
+			
+			font-size: 3vw;
+			
+			@include medium {
+			font-size: 1.5vw;
+			text-align: justify;
+		}
 		}
 		
 		@include e(image) {
@@ -356,7 +394,8 @@ z-index: 200;
 			text-align: center;
 			
 			@include medium {
-				margin: 40px;
+				margin: 40px auto;
+				width: 50%;
 			}
 			
 			& span {
@@ -528,6 +567,7 @@ transition-duration: .5s;
 	color: white;
 	text-align: center;
 	transition-duration: .5s;
+	cursor: pointer;
 	
 	&:hover {
 		background-color: $accent-color;
@@ -558,15 +598,27 @@ transition-duration: .5s;
 
 .icon {
 	display: inline-block;
-	@include margin(.5em);
+	@include margin(.5vw);
 	border-radius: 50%;
-	font-size: 4em;
+	font-size: 10vw;
 	background-color: $accent-color;
 	color: white;
+
+	@include medium {
+	display: inline-block;
+	@include margin(.5vw);
+	border-radius: 50vw;
+	font-size: 5vw;
+	background-color: $accent-color;
+	color: white;
+	}
 }
 
 .svg-inline--fa {
-	margin: .5em;
+	margin: 7vw;
+	@include medium {
+	margin: 2vw;
+}
 }
 
 
@@ -590,10 +642,13 @@ body {
 p {margin-bottom: 1.3em;}
 
 h1, h2, h3, h4 {
-  margin: 1.414em 0 0.5em;
+	margin: 10vw 0 3vw;
+@include medium {
+  margin: 1.414vw 0 1vw;
 	font-family: inherit;
   font-weight: inherit;
   line-height: 1.2;
+	}
 }
 
 h1 {
@@ -601,11 +656,24 @@ h1 {
   font-size: 6.854em;
 }
 
-h2 {font-size: 4.236em;}
+h2 {
+font-size: 10vw;
+@include medium{
+font-size: 4.236em;
+}
+}
 
-h3 {font-size: 2.618em;}
+h3 {
+font-size: 5vw;
+@include medium {
+font-size: 2.618em;}
+}
 
-h4 {font-size: 1.618em;}
+h4 {
+font-size: 4vw;
+@include medium {
+font-size: 1.618em;}
+}
 
 small, .font_small {font-size: 0.618em;}
 

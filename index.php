@@ -4,9 +4,8 @@
 <!doctype html>
 
 <head>
-	<title>69 KOI - Websites That Win | Website Marketing and SEO Services</title>
+	<title>69 KOI - Digital Marketing Agency | Website Design & SEO Services</title>
 	<meta name="Description" content="69 Koi is a web development and marketing company that Builds Profitable Websites backed by Purposeful Search Engine Optimization. Visit to Learn More!">
-	<link href="style.min.css" rel="stylesheet" type="text/css">
 	<?php include ('includes/head.php'); ?>
 
 	<!-- head tag is closed within include: head.php -->
@@ -23,16 +22,16 @@
 
 				<h3>Invest in immediate growth for your business.</h3>
 				<h4>Here's How</h4>
-				<i class="fas fa-angle-down animated fadeIn"></i>
+				<i class="fas fa-angle-down animated bounce"></i>
 
 			</div>
 			<!-- main__field -->
 
 			<div class="main__field">
 
-				<div class="banner animated fadeIn">
+				<div class="banner">
 
-					<div class="banner__section">
+					<div class="banner__section mainBanner1">
 						<div class="banner__header">
 							<h2>1. CREATE</h2>
 						</div>
@@ -44,8 +43,7 @@
 
 					<div class="banner__section">
 						<div class="banner__image">
-							<video src="images/site-build.mp4" type="video/mp4" width="100%" height="auto" preload="yes">
-							<source src="images/site-build.mp4" type="video/mp4">
+							<video src="images/site-build.mp4" type="video/mp4" width="100%" height="auto" autoplay>
 							</video>
 						</div>
 						<!-- banner image -->
@@ -54,8 +52,8 @@
 				</div>
 				<!-- banner -->
 
-				<div class="banner banner--water-bg animated fadeIn ">
-					<div class="banner__section">
+				<div class="banner banner--water-bg">
+					<div class="banner__section mainBanner2">
 						<div class="banner__header">
 							<h2>2. GET FOUND</h2>
 						</div>
@@ -87,9 +85,9 @@
 					</div>
 					<!-- banner section -->
 
-					<div class="banner__section banner__section--row" style="min-height: 30em">
-					<div class="graph-bar" id="graph-bar--1"></div>
-					<div class="graph-bar" id="graph-bar--2"></div>
+					<div class="banner__section banner__section--row" style="min-height: 30vw">
+					<div class="graph-bar graph-bar--1"></div>
+					<div class="graph-bar graph-bar--2"></div>
 					<div class="graph-bar graph-bar--3"></div>
 					<div class="graph-bar graph-bar--4"></div>
 					<div class="graph-bar graph-bar--5"></div>
@@ -107,41 +105,31 @@
 		<!-- main -->
 
 
-		<div class="footer__nav">
-			<span>69 KOI  &#169; Copyright 2018</span>
-			<ul class="list">
-				<li><a href="/privacy-policy.php">Privacy Policy</a>
-				</li>
-				<li><a href="/terms-conditions.php">Terms & Conditions</a>
-				</li>
-			</ul>
-		</div>
-
-
-
-
-
+		<?php include ('includes/footer.php'); ?>
+		
 		<script type="text/javascript">
-			function openMenu() {
-				document.getElementById( "fullpage-menu" ).classList.toggle( "fullpage-menu--hidden" );
-				document.getElementById( "menu-btn" ).classList.add( "fullpage-menu--hidden" );
-			}
-
-			function closeMenu() {
-				document.getElementById( "fullpage-menu" ).classList.toggle( "fullpage-menu--hidden" );
-				document.getElementById( "menu-btn" ).classList.remove( "fullpage-menu--hidden" );
-			}
-			
-			 if ( window.scrollY > document.querySelector('#graph-bar--1') ) { 
-				document.querySelector('#graph-bar--1').classList.add('graph-bar--1'); 
-			}
-			
-			if ( window.scrollY > document.querySelector('#graph-bar--2') ) { 
-				document.querySelector('#graph-bar--2').classList.add('graph-bar--2'); 
-			}
-			
+			document.addEventListener('scroll', function() {
+  var graphBar1 = document.querySelector('.graph-bar--1');
+  var graphBar2 = document.querySelector('.graph-bar--2');
+  var graphBar3 = document.querySelector('.graph-bar--3');
+  var graphBar4 = document.querySelector('.graph-bar--4');
+  var graphBar5 = document.querySelector('.graph-bar--5');
+  if(window.scrollY >= graphBar1.scrollTop) {
+    graphBar1.classList.add('graph-bar--1-animate');
+  }
+  if(window.scrollY >= graphBar2.scrollTop) {
+    graphBar2.classList.add('graph-bar--2-animate');
+  }
+  if(window.scrollY >= graphBar3.scrollTop) {
+    graphBar3.classList.add('graph-bar--3-animate');
+  }
+  if(window.scrollY >= graphBar4.scrollTop) {
+    graphBar4.classList.add('graph-bar--4-animate');
+  }
+  if(window.scrollY >= graphBar5.scrollTop) {
+    graphBar5.classList.add('graph-bar--5-animate');
+  }
+});
 		</script>
-
 	</body>
-
 </html>

@@ -46,12 +46,13 @@ module.exports = function (grunt) {
 				dest: 'script.min.js'
 			}
 		},
+		
 		watch: {
 			css: {
 				files: 'sass/*.scss',
 				tasks: ['sass', 'cssmin', 'concat']
 			},
-			js: {
+			scripts: {
 				files: 'js/*.js',
 				tasks: ['uglify']
 			}
