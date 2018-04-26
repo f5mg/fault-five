@@ -27,9 +27,9 @@ background-size: cover;
 background-repeat: no-repeat;
 background-attachment: fixed;
 
-@include medium {
-	margin-top: 0;
-}
+	@include medium {
+		margin-top: 0;
+	}
 
 	& a {
 	text-decoration: none;
@@ -48,24 +48,20 @@ background-attachment: fixed;
 	margin: 1em;
 	margin-top: 3em;
 	
-	@include medium {
-		margin-top: 1em;
-	}
+		@include medium {
+			margin-top: 1em;
+		}
 	
-	
-			& img {
-			width: 100%; 
-			transform: translateX(0px);
+		& img {
+		width: 100%; 
+		transform: translateX(0px);
 
 			@include medium {
 				font-size: 6.6em;
 				transform: translateX(-150px);
 			}
 		}
-	
-	
-	
-}
+	}	
 
 
 .menu-btn {
@@ -76,25 +72,25 @@ background-attachment: fixed;
 	background-color: $primary-color;
 	box-shadow: 2px 2px 20px 2px black;
 	
-	@include medium {
-	z-index: 100;
-	@include padding(2em);
-	background-color: transparent;
-	box-shadow: none;
-	width: auto;
-	}
+		@include medium {
+		z-index: 100;
+		@include padding(2em);
+		background-color: transparent;
+		box-shadow: none;
+		width: auto;
+		}
 	
-	& a {
+		& a {
 		font-size: 1.5em!important;
 		text-decoration: none;
 		color: black;
 		cursor: pointer;
 		
-		@include medium {
-			font-size: 2em!important;
+			@include medium {
+				font-size: 2em!important;
+			}
 		}
 	}
-}
 
 
 
@@ -107,10 +103,10 @@ background-color: rgba(253,253,253,1.0);
 -webkit-overflow-scrolling: touch;
 z-index: 200;
 
-@include medium {
-	background-color: rgba(253,253,253,.95);
-	position: fixed;
-}
+	@include medium {
+		background-color: rgba(253,253,253,.95);
+		position: fixed;
+	}
 
 	&--hidden {
 		display: none;
@@ -192,93 +188,83 @@ z-index: 200;
 }
 
 .banner {
-	@include flexbox;
-	@include flex-flow(column wrap);
-	@include padding(1vw 5vw);
-	
-	@include medium {
-		@include padding(1em 5em);
-	}
-	
-	&--water-bg {
-			background-image: url(../images/lake-1920.jpeg);
-			background-position: bottom;
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-attachment: fixed;
-	}
-	
-	&--row {
-			@include medium {
-			@include flex-flow(row wrap);
-			@include justify-content(space-around);
-		}
-	}
-	
-	&--rev-ord {
-	
-	@include medium {
-		@include flex-flow(row-reverse nowrap);
-	}
-	}
+ 	@include flexbox;
+ 	@include flex-flow(column wrap);
+ 	width: 100vw;
+ 	
+ 	&--water-bg {
+ 			background-image: url(../images/lake-1920.jpeg);
+ 			background-position: bottom;
+ 			background-size: cover;
+ 			background-repeat: no-repeat;
+ 			background-attachment: fixed;
+ 	}
+ 	
+ 	&--row {
+ 			@include medium {
+ 			@include flex-flow(row nowrap);
+ 			@include justify-content(space-around);
+ 		}
+ 	}
+ 	
+ 	&--rev-ord {
+ 	
+ 	@include medium {
+ 		@include flex-flow(row-reverse nowrap);
+ 	}
+ 	}
+ 	
+ 	@include medium {
+ 		@include margin(1em);
+ 		@include padding(1em 5em);
+ 	}
+ 
+ 	@include e(section) {
+ 		@include flexbox;
+ 		@include flex-flow(column wrap);
+ 		@include padding(1em 2.5em);
+		
+		&--center {
+ 		@include justify-content(center);
+ 		@include align-items(center);
+		
+		@include medium {
+		@include flex(1);
+			}
+ 		}
+ 		
+ 		&--row {
+ 		@include flex-flow(row nowrap);
+ 		@include justify-content(space-around);
+ 		}
+ 		
+ 		& span {
+ 			font-size: 2.5em;
+ 		}
+ 		
+ 		& p {
+ 			font-size: 1.5em;
+ 		}
+ 	}
+ 	
+ 	@include e(header) {
+ 		@include flexbox;
+ 		@include flex-flow(row wrap);
+ 		
+ 		&--center {
+ 		@include justify-content(center);
+ 		}
+ 	}
+ }
 
-	@include e(section) {
-		@include flexbox;
-		@include flex-flow(column wrap);
-		@include justify-content(flex-start);
-		@include padding(1em 2.5em);
-		
-		@include medium {
-		@include padding(1em 2.5em);
-		}
-		
-		
-		&--center {
-		@include justify-content(center);
-		@include align-items(center);
-		
-		@include medium {
-			@include flex(1);
-			}
-		}
-		
-		&--top {
-			@include justify-content(flex-start);
-		}
-		
-		&--row {
-		@include flex-flow(row nowrap);
-		@include justify-content(space-around);
-		}
-		
-		& span {
-			font-size: 5vw;
-			
-			@include medium {
-			font-size: 2.5vw;
-			}
-		}
-		
-		& p {
-			font-size: 3vw;
-			
-			@include medium {
-			font-size: 1.5vw;
-			}
-		}
-	}
-	
-	@include e(header) {
-		@include flexbox;
-		@include flex-flow(row wrap);
-		
-		&--center {
-		@include justify-content(center);
-		}
-	}
+
+.graph-bars {
+min-height: 40vw;
+
+@include medium {
+ min-height: 30em
 }
-
-
+}
 
 .graph-bar {
 	background-color: $accent-color;
@@ -352,57 +338,42 @@ z-index: 200;
 }
 
 .text-field {
-
-	@include padding(1vw);
-	
-	@include medium {
-		@include padding(3vw);
-	}
-		
-		& img {
-			box-shadow: 5px 5px 20px 1px rgba(0,0,0, .25);
-			margin: 3em auto;
-			
-		}
-		
-		& span {
-			font-size: 5vw;
-			
-			@include medium {
-			font-size: 2.5vw;
-			}
-		}
-		
-		& p {
-		
-			@include small {
-			font-size: 7vw;
-			}
-			
-			font-size: 3vw;
-			
-			@include medium {
-			font-size: 1.5vw;
-			text-align: justify;
-		}
-		}
-		
-		@include e(image) {
-			
-		  @include flexbox;
-			@include flex-flow(column nowrap);
-			text-align: center;
-			
-			@include medium {
-				margin: 40px auto;
-				width: 50%;
-			}
-			
-			& span {
-				font-size: 1.25em;
-			}
-		}
-	}
+ 
+ 	@include padding(1em);
+ 	
+ 	@include medium {
+ 		@include padding(3em);
+ 	}
+ 		
+ 		& img {
+ 			box-shadow: 5px 5px 20px 1px rgba(0,0,0, .25);
+ 			margin: 3em auto;
+ 			
+ 		}
+ 		
+ 		& span {
+ 			font-size: 2.5em;
+ 		}
+ 		
+ 		& p {
+ 			font-size: 1.5em;
+ 		}
+ 		
+ 		@include e(image) {
+ 			
+ 		  @include flexbox;
+ 			@include flex-flow(column nowrap);
+ 			text-align: center;
+ 			
+ 			@include medium {
+ 				margin: 40px;
+ 			}
+ 			
+ 			& span {
+ 				font-size: 1.25em;
+ 			}
+ 		}
+ 	}
 
 
 
@@ -595,88 +566,57 @@ transition-duration: .5s;
 
 
 /* ICONS */
-
-.icon {
-	display: inline-block;
-	@include margin(.5vw);
-	border-radius: 50%;
-	font-size: 10vw;
-	background-color: $accent-color;
-	color: white;
-
-	@include medium {
-	display: inline-block;
-	@include margin(.5vw);
-	border-radius: 50vw;
-	font-size: 5vw;
-	background-color: $accent-color;
-	color: white;
-	}
-}
-
-.svg-inline--fa {
-	margin: 7vw;
-	@include medium {
-	margin: 2vw;
-}
-}
-
-
+ 
+ .icon {
+ 	display: inline-block;
+ 	@include margin(.5em);
+ 	border-radius: 50%;
+ 	font-size: 4em;
+ 	background-color: $accent-color;
+ 	color: white;
+ }
+ 
+ .svg-inline--fa {
+ 	margin: .5em;
+ }
 
 
 
 /* font control */
-
-.center-text {
-	text-align: center;
-}
-
-html {font-size: 1em;}
-
-body {
-  font-family: $fjalla;
-  font-weight: 400;
-  line-height: 1.45;  
-}
-
-p {margin-bottom: 1.3em;}
-
-h1, h2, h3, h4 {
-	margin: 10vw 0 3vw;
-@include medium {
-  margin: 1.414vw 0 1vw;
-	font-family: inherit;
-  font-weight: inherit;
-  line-height: 1.2;
-	}
-}
-
-h1 {
-  margin-top: 0;
-  font-size: 6.854em;
-}
-
-h2 {
-font-size: 10vw;
-@include medium{
-font-size: 4.236em;
-}
-}
-
-h3 {
-font-size: 5vw;
-@include medium {
-font-size: 2.618em;}
-}
-
-h4 {
-font-size: 4vw;
-@include medium {
-font-size: 1.618em;}
-}
-
-small, .font_small {font-size: 0.618em;}
-
+ 
+ .center-text {
+ 	text-align: center;
+ }
+ 
+ html {font-size: 1em;}
+ 
+ body {
+   font-family: $fjalla;
+   font-weight: 400;
+   line-height: 1.45;  
+ }
+ 
+ p {margin-bottom: 1.3em;}
+ 
+ h1, h2, h3, h4 {
+   margin: 1.414em 0 0.5em;
+ 	font-family: inherit;
+   font-weight: inherit;
+   line-height: 1.2;
+ }
+ 
+ h1 {
+   margin-top: 0;
+   font-size: 6.854em;
+ }
+ 
+ h2 {font-size: 4.236em;}
+ 
+ h3 {font-size: 2.618em;}
+ 
+ h4 {font-size: 1.618em;}
+ 
+ small, .font_small {font-size: 0.618em;}
 
 
 

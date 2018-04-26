@@ -85,7 +85,7 @@
 					</div>
 					<!-- banner section -->
 
-					<div class="banner__section banner__section--row" style="min-height: 30vw">
+					<div class="banner__section banner__section--row graph-bars">
 					<div class="graph-bar graph-bar--1"></div>
 					<div class="graph-bar graph-bar--2"></div>
 					<div class="graph-bar graph-bar--3"></div>
