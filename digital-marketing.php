@@ -64,7 +64,7 @@
 		<div class="main__field">
 			<div class="banner banner--row">
 				<div class="banner__section banner__section--center">
-					<img src="images/portfolio-neurli.png" width="100%" height="auto" />
+					<img src="portfolio/neurli-devices-screenshots.jpg" width="100%" height="auto" />
 				</div><!-- banner section -->
 				
 				<div class="banner__section banner__section--center">
@@ -74,33 +74,17 @@
 							<div class="btn"><a href="portfolio/neurli.php">Read More</a></div><!-- btn -->
 					</div><!-- text field -->
 				</div><!-- banner section -->
-			</div><!-- banner -->
+			</div><!-- banner -->	
 			
-			<div class="banner banner--row banner--rev-ord">
+			<div class="banner banner--row banner--cta">
 				<div class="banner__section banner__section--center">
-					<img src="images/folio-edr-site.jpg" width="100%" height="auto" />
+					<div class="text-field">
+						<span>Want to see more amazing Websites?</span>
+						</div><!-- text field -->
 				</div><!-- banner section -->
 				
 				<div class="banner__section banner__section--center">
-					<div class="text-field">
-							<span>Safe In Any Emergency</span>
-							<p>Emergency Disaster Recovery provides exceptional Emergency Restoration Services and wanted to expand their geographical footprint for services offered. Our team created a winning Monthly SEO Campaign focused on their local market. This was accomplished through a robust Services Page, a News Page regarding their industry trends and a FAQ page that helped their clients undestand why EDR is the best choice. This lead to an expansion of the business and put them on the mark. It doesn't stop there!</p>
-							<div class="btn"><a href="portfolio/edr.php">Read More</a></div><!-- btn -->
-					</div><!-- text field -->
-				</div><!-- banner section -->
-			</div><!-- banner -->
-			
-			<div class="banner banner--row">
-				<div class="banner__section banner__section--center">
-					<img src="images/sunflower-field.jpg" width="100%" height="auto" />
-				</div><!-- banner section -->
-				
-				<div class="banner__section banner__section--center">
-					<div class="text-field">
-							<span>Bold Doesn't Even Describe IT</span>
-							<p>Bold IT Solution offers the best in IT consultation services but needed an online presence that displayed them as the BEST in their industry. Our team got to work and developer a user friendly website with a creative twist. With the large amount of services BOLD IT provided our team planned the site flow to be as consise as possible while still creating value for the websites search ranking. That was just the begging!</p>
-							<div class="btn"><a href="portfolio/boldit.php">Read More</a></div><!-- btn -->
-					</div><!-- text field -->
+					<div class="cta-btn"><a href="#">Check it Out!</a></div><!-- btn -->
 				</div><!-- banner section -->
 			</div><!-- banner -->
 		

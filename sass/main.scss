@@ -56,7 +56,7 @@ background-attachment: fixed;
 		width: 100%; 
 		transform: translateX(0px);
 
-			@include medium {
+			@include large {
 				font-size: 6.6em;
 				transform: translateX(-150px);
 			}
@@ -92,7 +92,44 @@ background-attachment: fixed;
 		}
 	}
 
+#back2Top {
 
+display: none;
+& svg {
+display: none;
+}
+
+@include medium {
+    width: 4vw;
+    line-height: 4vw;
+    overflow: hidden;
+    z-index: 999;
+    display: none;
+    cursor: pointer;
+    -moz-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    position: fixed;
+    bottom: 50px;
+    right: 0;
+    background-color: $accent-color;
+    color: white;
+    text-align: center;
+    font-size: 2vw;
+    text-decoration: none;
+		opacity: .75;
+		border-radius: 2px;
+		
+		& svg {
+display: inline;
+}
+}
+}
+#back2Top:hover {
+    background-color: $dark-grey;
+}
 
 .fullpage-menu {
 width: 100%;
@@ -108,7 +145,7 @@ z-index: 200;
 		position: fixed;
 	}
 
-	&--hidden {
+	@include m(hidden) {
 		display: none;
 	}
 	
@@ -173,6 +210,7 @@ z-index: 200;
 	@include justify-content(center);
 	@include align-items(center);
 	padding-bottom: 4em;
+	background-color: white;
 	
 	@include e(field) {
 		min-height: 2em;
@@ -190,8 +228,22 @@ z-index: 200;
 .banner {
  	@include flexbox;
  	@include flex-flow(column wrap);
- 	width: 100vw;
+ 	width: 100%;
+	
+	@include medium {
+ 		@include padding(1em 5em);
+ 	}
  	
+	@include e(image) {
+		@include margin(0 auto);
+	}
+	
+	@include m(cta) {
+		background-color: $accent-color;
+		color: white;
+		
+	}
+	
  	&--water-bg {
  			background-image: url(../images/lake-1920.jpeg);
  			background-position: bottom;
@@ -201,37 +253,39 @@ z-index: 200;
  	}
  	
  	&--row {
- 			@include medium {
+ 			@include large {
  			@include flex-flow(row nowrap);
  			@include justify-content(space-around);
  		}
  	}
  	
  	&--rev-ord {
- 	
- 	@include medium {
- 		@include flex-flow(row-reverse nowrap);
- 	}
- 	}
- 	
- 	@include medium {
- 		@include margin(1em);
- 		@include padding(1em 5em);
+		@include large {
+			@include flex-flow(row-reverse nowrap);
+		}
  	}
  
  	@include e(section) {
  		@include flexbox;
  		@include flex-flow(column wrap);
- 		@include padding(1em 2.5em);
+ 		@include padding(.5em);
+		
+		@include medium {
+			@include padding(1em 2.5em);
+		}
 		
 		&--center {
  		@include justify-content(center);
  		@include align-items(center);
 		
-		@include medium {
-		@include flex(1);
-			}
+			@include large {
+			@include flex(1);
+				}
  		}
+		
+		&--top {
+			@include justify-content(flex-start);
+		}
  		
  		&--row {
  		@include flex-flow(row nowrap);
@@ -240,10 +294,19 @@ z-index: 200;
  		
  		& span {
  			font-size: 2.5em;
+			
+			@include large {
+				font-size: 3vw;
+			}
  		}
  		
  		& p {
  			font-size: 1.5em;
+			text-align: justify;
+			
+			@include large {
+				font-size: 1.8vw;
+			}
  		}
  	}
  	
@@ -341,7 +404,7 @@ min-height: 40vw;
  
  	@include padding(1em);
  	
- 	@include medium {
+ 	@include large {
  		@include padding(3em);
  	}
  		
@@ -353,10 +416,19 @@ min-height: 40vw;
  		
  		& span {
  			font-size: 2.5em;
+			
+			@include large {
+				font-size: 3vw;
+			}
  		}
  		
  		& p {
  			font-size: 1.5em;
+			text-align: justify;
+			
+			@include large {
+				font-size: 1.8vw;
+			}
  		}
  		
  		@include e(image) {
@@ -365,9 +437,14 @@ min-height: 40vw;
  			@include flex-flow(column nowrap);
  			text-align: center;
  			
- 			@include medium {
- 				margin: 40px;
+ 			@include small {
+ 				margin: 40px auto;
+				width: 50%;
  			}
+			
+			@include large {
+				width: 50%;
+			}
  			
  			& span {
  				font-size: 1.25em;
@@ -482,6 +559,10 @@ transition-duration: .5s;
 	margin: 0 auto;
 	
 	@include medium {
+		width: 75%;
+	}
+	
+	@include large {
 		@include padding(1em 4em);
 		width: 50%;
 	}
@@ -559,7 +640,34 @@ transition-duration: .5s;
 				transition-duration: .5s;
 			}
 	}
+	
+	
 }
+
+.cta-btn {
+		display: inline-block;
+	@include padding(.5em 1.5em);
+	background-color: black;
+	color: white;
+	text-align: center;
+	transition-duration: .5s;
+	cursor: pointer;
+	border-radius: 2px;
+	
+	&:hover {
+		background-color: white;
+		color: $dark-grey;
+		transition-duration: .5s;
+		box-shadow: 0 5px 10px 0 rgba(0,0,0, .33);
+	}
+	
+	& a {
+	color: inherit;
+	font-size: 3em;
+	font-family: $fjalla;
+	text-decoration: none;
+	}
+	}
 
 
 
@@ -585,7 +693,7 @@ transition-duration: .5s;
 /* font control */
  
  .center-text {
- 	text-align: center;
+ 	text-align: center!important;
  }
  
  html {font-size: 1em;}

@@ -9,3 +9,4 @@ function openMenu() {
 				document.getElementById( "fullpage-menu" ).classList.toggle( "fullpage-menu--hidden" );
 				document.getElementById( "menu-btn" ).classList.remove( "fullpage-menu--hidden" );
 			}
+	

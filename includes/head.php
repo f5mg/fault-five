@@ -6,6 +6,7 @@
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <link type="text/css" href="style.min.css" rel="stylesheet">
 <script type="text/javascript" src="../js/fullpageMenu.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117663595-1"></script>

@@ -8,7 +8,8 @@
     "grunt": "^1.0.1",
     "grunt-browser-sync": "^2.2.0",
     "grunt-contrib-sass": "^1.0.0",
-    "grunt-sitemap": "^1.2.1"
+    "grunt-sitemap": "^1.2.1",
+    "npm": "^6.0.1"
   },
   "devDependencies": {
     "coffeescript": "^2.2.0",

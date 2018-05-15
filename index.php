@@ -43,8 +43,7 @@
 
 					<div class="banner__section">
 						<div class="banner__image">
-							<video src="images/site-build.mp4" type="video/mp4" width="100%" height="auto" autoplay>
-							</video>
+								<img src="portfolio/devices-screenshots.jpg" width="100%"/>
 						</div>
 						<!-- banner image -->
 					</div>

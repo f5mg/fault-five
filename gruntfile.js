@@ -41,11 +41,12 @@ module.exports = function (grunt) {
 				},
 
 		uglify: {
-			build: {
-				src: ['js/*.js'],
-				dest: 'script.min.js'
-			}
-		},
+    my_target: {
+      files: {
+        'main.min.js': ['js/*.js']
+      }
+    }
+  },
 		
 		watch: {
 			css: {
