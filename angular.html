@@ -17,8 +17,21 @@
 
 <body>
 
+<header class="header">
+<h2 class="">Anna & Davids Shopping List</h2>
+<p>This allows for the creation of a serverless list. Simple input the item name within the provided field and click add. This will add the item with an associated checkbox for tracking purposes. Enjoy!</p>
+</header>
+
 <div ng-controller="todoList">
-<span>Items: {{todos.length}}</span>
+
+
+<form ng-submit="addTodo()" class="form">
+  <input type="text" ng-model="todoText" size="30"
+    placeholder="Add New Items Here" class="form__input">
+  <input type="submit" value="add" class="form__input">
+</form>
+
+<span class="text-field">Items: {{todos.length}}</span>
 <ul>
   <li ng-repeat="todo in todos">
     <label class="checkbox">
@@ -27,12 +40,8 @@
     </label>
   </li>
 </ul>
-<form ng-submit="addTodo()" class="form">
-  <input type="text" ng-model="todoText" size="30"
-    placeholder="Add New Items Here" class="form__input">
-  <input type="submit" value="add" class="form__input">
-</form>
 </div>
+
 
 
 <script>
